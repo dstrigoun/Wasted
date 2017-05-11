@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
    
 	
-	window.location = 'http://students.bcitdev.com/A00989687/WASTED2/Webpage4/links.html'
+	window.location = 'http://students.bcitdev.com/A00541112/Webpage/links.html'
 
 
   } else {
@@ -39,7 +39,7 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
   // ...
 });
 if(user){
-		  window.location = 'http://students.bcitdev.com/A00969281/Webpage4_mobile/index.html'
+		  window.location = 'http://students.bcitdev.com/A00541112/Webpage/index.html'
 	  }
 	}
 );
@@ -66,7 +66,7 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
   // ...
 });
 if(user){
-		  window.location = 'http://students.bcitdev.com/A00969281/Webpage4_mobile/index.html'
+		  window.location = 'http://students.bcitdev.com/A00541112/index.html'
 	  }
 	}
 );
