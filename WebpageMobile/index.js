@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 	$("#signOutBtn").click(
   function(){
 
-	window.location = 'http://students.bcitdev.com/A00541112/Webpage/index.html'
+	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
 
 	
   }
