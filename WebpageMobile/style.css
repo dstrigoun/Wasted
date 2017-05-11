@@ -1,0 +1,343 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Trebuchet MS, Arial, sans-serif;
+}
+/*css for the header*/
+header {
+	background-image: url('images/logo.png');
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+#index {
+	height: 435px;
+}
+/*css for the home page*/
+#login_form {
+    width: 60%;
+    margin: 0 auto;
+}
+#sign_up {
+    width: 60%;
+    margin: 0 auto;
+	display: none;
+}
+.home caption {
+    font-size: 3.5em;
+	padding-bottom: 10px;
+}
+.home label {
+    font-size: 2.5em;
+}
+.home {
+	width:100%;
+}
+.home td {
+	width:100%;
+}
+#signUpEmail{
+	width:100%;
+}
+#signUpPassword{
+	width:100%;
+}
+#loginEmail{
+	width:100%;
+}
+#loginPassword{
+	width:100%;
+}
+input[type="text"] {
+    width: 195px;
+    height: 35px;
+	font-size: 1.7em;
+	border: 1px solid black;
+}
+#loginBtn {
+	float:right;
+}
+#signUpBtn {
+	float:right;
+}
+#form {
+    text-align: left;
+}
+#pop a{
+	text-decoration: none;
+    color: black;
+    font-size: 1.6em;
+	color:white;
+}
+#pop {
+	background-color: #4CAF50;
+	border: 1px solid black;
+	width:29%;
+	margin: 65px auto;
+	text-align: center;
+    border-radius: 36px;
+	padding: 5px 0;
+}}
+#pop:active {
+    background-color: #306F33;
+}
+#loginBtn{
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#loginBtn:hover{
+	background-color: #306F33;
+}
+#signUpBtn{
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#signUpBtn:hover{
+	background-color: #306F33;
+}
+
+
+/*css for the footer*/
+footer {
+	z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+	text-align: center;
+    height: 170px;
+    line-height: 120px;
+    font-style: italic;
+    font-size: 1.4em;
+}
+
+/*css for the links page*/
+#links {
+    height: 295px;
+	position: relative;
+}
+
+#fridgeLogo img {
+height: 260px;
+}
+
+#person img {
+    height: 260px;
+}
+#phone img {
+    height: 260px;
+}
+#info img {
+    height: 260px;
+}
+
+#fridgeLogo {
+    width: 33%;
+    float: left;
+	padding-left: 160px;
+	padding-top: 150px;
+	
+}
+#person {
+    width: 33%;
+    float: right;
+	padding-right: 100px;
+    padding-top: 150px;
+}
+#phone {
+    width: 33%;
+    float: right;
+	padding-right:100px;
+    padding-top: 70px;
+	padding-bottom:100px;
+}
+#info {
+    width: 33%;
+    float: left;
+	padding-left:160px;
+    padding-top: 70px;
+	padding-bottom:100px;
+}
+
+#pics label {
+    font-size: 2em;
+}
+
+#loginLinks {
+    width: 100%;
+    height: 45px;
+}
+
+#signOutBtn {
+	float: right;
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    margin-right: 30px;
+    cursor: pointer;
+	border-radius:36px;
+	position:absolute;
+	right:0;
+	top: 270px;
+}
+p{
+	display: block;
+}
+
+/*css for the fridge page*/
+#fridgePage {
+    height: 295px;
+	position: relative;
+}
+
+#add_item {
+    width: 73%;
+    margin: 0 auto;
+}
+
+#add_item th {
+    float: left;
+}
+
+#itemName {
+    width: 100%;
+}
+#datepicker {
+    width: 100%;
+}
+form#add_item {
+    margin-top: 7%;
+}
+
+#add {
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius:36px;
+	margin-top: 4%;
+	margin-bottom: 10%;
+	float: right;
+}
+label.fPage {
+    font-size: 1.6em;
+    float: left;
+	width: 100%;
+}
+/*
+#remind {
+    width: 59%;
+    font-size: 1.6em;
+	float:left;
+    margin-top: 2%;
+}
+input[type="radio"] {
+    margin-left: 8%;
+}
+*/
+#place_holder {
+    width: 95%;
+    margin: 0 auto;
+	font-size: 2em;
+	margin-bottom: 200px;
+}
+#fridge th {
+    width: 33%;
+}
+#fridge {
+    width: 100%;
+	border-collapse: collapse;
+}
+thead {
+    background-color: #4CAF50;
+	color: white;
+}
+#add_form {
+    width: 100%;
+}
+#table_body td {
+    width: 33%;
+}
+#table_body {
+	margin-top:7%;
+    width: 100%;
+	border-collapse: collapse;
+	text-align:center;
+}
+#table_body tr:nth-child(even){background-color: #f2f2f2}
+
+#table_body tr {
+    border: 1px solid black;
+	    height: 120px;
+}
+#table_body button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 36px;
+}
+th.head {
+    padding: 2px 0px;
+    line-height: 52px;
+}
+
+/*css for the nav bar*/
+.nav {
+    bottom: 0;
+	position: fixed;
+    width: 100%;
+    background-color: #555555;
+}
+.nav img {
+    width: 11%;
+	float: left;
+	padding: 0 7%;
+}
+
+.footerFridge {
+    padding-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+

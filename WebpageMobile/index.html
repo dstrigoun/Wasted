@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasted</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header id="index">	
+		
+	</header>
+	
+	<div id="form">
+	
+		<div id="login_form">
+			<table class="home">
+			<caption>Login</caption>
+				<tr>
+					<th><label class="email" for="loginEmail">Email: </label></th>			
+					<td><input name="loginEmail" type="text" id="loginEmail" placeholder="Enter ID..."></td>
+				</tr>
+				<tr>
+					<th><label for="loginPassword">Password: </label></th>
+					<td><input name="loginPassword" type="text" id="loginPassword" placeholder="Enter Password..."></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><button id="loginBtn">Sign In</button></td>
+				</tr>
+			</table>
+				
+				
+					
+			<p id="signInError"></p>
+		</div>
+		
+		<div id="pop">
+			<a href="#" onclick="myFunction()">Click To Sign Up</a>
+		</div>
+		
+		<script>
+		function myFunction() {
+			var popUp = document.getElementById('sign_up');
+				if (popUp.style.display === 'block') {
+					popUp.style.display = 'none';
+				} else {
+					popUp.style.display = 'block';
+				}
+		}
+		</script>
+	
+		<div id="sign_up">		
+			
+			<table class="home">
+			<caption>Sign Up</caption>
+				<tr>
+					<th> <label class="email" for="signUpEmail">Email: </label></th>	
+					<td><input name="signUpEmail" type="text" id="signUpEmail" placeholder="Enter ID..."></td>
+				</tr>
+				<tr>
+					<th><label for="signUpPassword">Password: </label></th>
+					<td><input name="signUpPassword" type="text" id="signUpPassword" placeholder="Enter Password..."></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td><button id="signUpBtn">Sign Up</button></td>
+				</tr>
+			</table>	
+											
+			<p id="signUpError" style="hide"></p>
+		</div>  
+	</div>
+	
+	<footer>
+		<p>Copyright &copy; Wasted(G_40), 2017</p>
+	</footer>
+	
+	
+
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
+		authDomain: "fir-web-learn-6d987.firebaseapp.com",
+		databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
+		projectId: "fir-web-learn-6d987",
+		storageBucket: "fir-web-learn-6d987.appspot.com",
+		messagingSenderId: "15555479095"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	
+	<script src = "index.js"> </script>
+	<script src="form.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasted</title>
+	<!-- The code below ports an old version of JQUERY with a datepicker widget -->
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<script>
+		
+			$( function() {
+			$( "#datepicker" ).datepicker();
+			} );
+			
+		</script>
+		
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header id="fridgePage">	
+		<div id="login">
+			<button id="signOutBtn"></button>
+		</div>
+		
+	</header>
+	
+	
+	<button onclick="expiryOrganized()">Sort by expiry</button>
+	<button onclick="alphabetOrganized()">Sort by alphabet</button>
+	<form id="add_item" action="#">
+	
+	
+		
+		<table id="add_form">
+			<tr>
+				<th><label class="fPage" for="item">Enter Item: </label></th>
+				<td><input type="text" id="itemName" name="item" placeholder="Item.."></td>
+			</tr>
+			<tr>
+				<th><label class="fPage" for="edate">Enter Expiry Date: </label></th>
+				<td><input type="text" id="datepicker" name="edate" placeholder="Date.."></td>
+			</tr>
+		</table>	
+		<!--
+			<div id="remind">
+				<label for="remind">Remind Me: </label> <br>
+					<input type="radio" name="remind" value="1day">1 day before expiry date.</input><br>
+					<input type="radio" name="remind" value="2days">2 days before expiry date.</input><br>
+					<input type="radio" name="remind" value="3days">3 days before expiry date.</input><br>
+			</div>	
+		-->	
+			<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
+				
+	</form>
+	
+	
+	<div id="place_holder">	
+	
+		<table id="fridge">
+			<thead>
+					<tr>
+						<th class="head">Name</th>
+						<th class="head">Expiry Date</th>
+						<th class ="daysLeft">Days Left</th>
+						<th class="head">Remove</th>
+						
+					</tr>
+			</thead>
+			
+			<tbody id = "table_body">
+					
+			</tbody>
+			
+		</table>
+		
+	</div>
+		
+	<footer class="nav">
+		<div class="footerFridge">
+			<a href="fridge.html"><img src="images/fridge.png" alt="Fridge"></a>
+		</div>
+		<div class="footerAbout">
+			<a href="about_us.html"><img src="images/person.png" alt="person"></a>
+		</div>
+		<div class="footerContact">
+			<a href="contact_us.html"><img src="images/phone.png" alt="Contact"></a>
+		</div>
+		
+		<div class="footerInfo">
+			<a href="info.html"><img src="images/magnifying.png" alt="Info"></a>
+		</div>
+	</footer>
+	
+
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
+		authDomain: "fir-web-learn-6d987.firebaseapp.com",
+		databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
+		projectId: "fir-web-learn-6d987",
+		storageBucket: "fir-web-learn-6d987.appspot.com",
+		messagingSenderId: "15555479095"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+ <!-- We comment out the new verison of JQUERY <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+	
+	<script src = "index.js"> </script>
+
+</body>
+
+</html>
