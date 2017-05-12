@@ -5,42 +5,40 @@ var firebaseRef = firebase.database().ref();
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     
-	
+	//user is signed in
    $("#signOutBtn").text("Welcome " + firebase.auth().currentUser.email + ". Click to logout");
-  
-	
 
+   
   } else {
    
-
     // No user is signed in.
     $("#signOutBtn").text("Sign in / Sign Up");
-	$("#signOutBtn").click(
-  function(){
 
-	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
 
-	
-  }
-);
+	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'	
+
 
 
   }
 });
 
 
-/** SORTING BY EXPIRY **/
+/** SORTING BY EXPIRY -- page loads and populates the table with values from the database **/
 
 function expiryOrganized() {
 
-		document.getElementById("table_body").innerHTML = "";
+	document.getElementById("table_body").innerHTML = "";
+	
 	firebaseRef.orderByChild("expiry").on("child_added", snap => {
+	
 	var name = snap.child("name").val();
 	var expiry = snap.child("expiry").val();
 	var id = snap.key;
 	var childAuthor = snap.child("author").val();
 	var thisAuthor = firebase.auth().currentUser.uid;
 
+	
+	/** Creating dates to use when sorting by expiry **/
 	
 	var today = new Date();
 	var todayAgain = new Date();
@@ -111,19 +109,22 @@ function expiryOrganized() {
 
 
 
-/** SORTING BY ALPHABET **/
+/** SORTING BY ALPHABET -- table loads and is pupulated by values pulled from databse sorted alphabetically **/
 
 
 function alphabetOrganized() {
 
 
-		document.getElementById("table_body").innerHTML = "";
+	document.getElementById("table_body").innerHTML = "";
+
 	firebaseRef.orderByChild("name").on("child_added", snap => {var name = snap.child("name").val();
+
 	var expiry = snap.child("expiry").val();
 	var id = snap.key;
 	var childAuthor = snap.child("author").val();
 	var thisAuthor = firebase.auth().currentUser.uid;
 
+	/**Creates a date variable **/
 	
 	var today = new Date();
 	var todayAgain = new Date();
@@ -192,10 +193,7 @@ function alphabetOrganized() {
 }
 
 
-/**  SUBMITTING AN ITEM INTO THE DATABASE     **/
-
-
-
+/**  SUBMITTING AN ITEM INTO THE DATABASE -- On click takes the values of the two input boxes and pushes them into the database    **/
 
 
 function submitClick() {
@@ -208,16 +206,11 @@ var firebaseRef = firebase.database().ref();
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
-
-	
 	var itemText = capitalizeFirstLetter(itemName.value);
 	var expiryText = expiryName.value;
 	
 	var author = firebase.auth().currentUser.uid;
 	var email = firebase.auth().currentUser.email;
-	
-
-	
 	
 	firebaseRef.push({
 		'expiry': expiryText,
@@ -230,7 +223,7 @@ function capitalizeFirstLetter(string) {
 }
 
 
-/**  REMOVING AN ITEM FROM THE DATABSE  **/
+/**  REMOVING AN ITEM FROM THE DATABSE -- Removes the selected item from the database **/
 
 function removeClick(obj) {
 	var id = obj.id;
@@ -240,8 +233,7 @@ function removeClick(obj) {
 }
 
 
-/** LOADING THE TABLE OF ITEMS FROM DATABASE BY USER **/
-
+/** LOADING THE TABLE OF ITEMS FROM DATABASE BY USER -- pulls user specific values from the database and then populates the table **/
 
 var z = 1;
 if (z == 1) {
@@ -314,16 +306,14 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 			
 		}
     }
-
 	
-  });
-  
+  }); 
 
 }
 
 
 
-/* LOGOUT PROCESS */
+/* LOGOUT PROCESS -- Signs out the current user */
 
 $("#signOutBtn").click(
   function(){
