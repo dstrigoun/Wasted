@@ -331,8 +331,77 @@ th.head {
     padding-top: 35px;
 }
 
+/*css for the info page*/
+#info_page {
+	height: 295px;
+}
+
+.appContent {
+	text-align: center;
+	font-size: 1.8em;
+	padding: 0 25px;
+}
+
+#affiliate {
+	margin-bottom: 200px;
+}
+
+#race {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#foodFactory {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.titles {
+    font-size: 4em;
+    margin: 0;
+	padding: 25px 0;
+	text-align: center;
+}
+
+#take {
+    width: 42%;
+    margin-left: 29%;
+}
+
+#title {
+	font-size: 5em;
+    text-align: center;
+	margin: 0;
+}
+
+.alt {
+	background-color: #DCDCDC;
+    margin: 30px 0;	
+	padding: 20px 0;
+}
+
+#waste {
+    width: 46%;
+    margin-left: 27%;
+}
+
+.visit {
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 22%;
+    cursor: pointer;
+    font-size: 2.2em;
+    border-radius: 36px;
+    margin: 0 34%;
+}
 
 
+    
 
 
 
