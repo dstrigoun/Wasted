@@ -54,6 +54,12 @@ input[type="text"] {
 	font-size: 1.7em;
 	border: 1px solid black;
 }
+input[type="password"] {
+    width: 195px;
+    height: 35px;
+    font-size: 1.7em;
+    border: 1px solid black;
+}
 #loginBtn {
 	float:right;
 }
