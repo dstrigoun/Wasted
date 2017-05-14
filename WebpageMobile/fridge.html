@@ -23,43 +23,92 @@
 </head>
 
 <body>
-	<header id="fridgePage">	
+	<header class="header_logo">	
 		<div id="login">
 			<button id="signOutBtn"></button>
 		</div>
-		
 	</header>
 	
+	<div class="topnav" id="myTopnav">
+		<a href="fridge.html">MyFridge</a>
+		<a href="contact_us.html">Contact Us</a>
+		<a href="about_us.html">About Us</a>
+		<a href="affiliate.html">Affiliates</a>
+		 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
 	
-	<button onclick="expiryOrganized()">Sort by expiry</button>
-	<button onclick="alphabetOrganized()">Sort by alphabet</button>
-	<form id="add_item" action="#">
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 	
+	<button id="myBtn">Add Item</button>
 	
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+			<span class="close">&times;</span>
+				<form id="add_item" action="#">
+					<table id="add_form">
+						<tr>
+							<th><label class="fPage" for="item">Enter Item: </label></th>
+							<td><input type="text" id="itemName" name="item" placeholder="Item.."></td>
+						</tr>
+						<tr>
+							<th><label class="fPage" for="edate">Enter Expiry Date: </label></th>
+							<td><input type="text" id="datepicker" name="edate" placeholder="Date.."></td>
+						</tr>
+					</table>	
+					<!--
+						<div id="remind">
+							<label for="remind">Remind Me: </label> <br>
+								<input type="radio" name="remind" value="1day">1 day before expiry date.</input><br>
+								<input type="radio" name="remind" value="2days">2 days before expiry date.</input><br>
+								<input type="radio" name="remind" value="3days">3 days before expiry date.</input><br>
+						</div>	
+					-->	
+						<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
+						
+				</form>
+			</div>
+		</div>
 		
-		<table id="add_form">
-			<tr>
-				<th><label class="fPage" for="item">Enter Item: </label></th>
-				<td><input type="text" id="itemName" name="item" placeholder="Item.."></td>
-			</tr>
-			<tr>
-				<th><label class="fPage" for="edate">Enter Expiry Date: </label></th>
-				<td><input type="text" id="datepicker" name="edate" placeholder="Date.."></td>
-			</tr>
-		</table>	
-		<!--
-			<div id="remind">
-				<label for="remind">Remind Me: </label> <br>
-					<input type="radio" name="remind" value="1day">1 day before expiry date.</input><br>
-					<input type="radio" name="remind" value="2days">2 days before expiry date.</input><br>
-					<input type="radio" name="remind" value="3days">3 days before expiry date.</input><br>
-			</div>	
-		-->	
-			<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
-				
-	</form>
-	
-	
+		<button onclick="expiryOrganized()">Sort by expiry</button>
+		<button onclick="alphabetOrganized()">Sort by alphabet</button>	
+		
+		 <script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+			
 	<div id="place_holder">	
 	
 		<table id="fridge">
@@ -67,13 +116,13 @@
 					<tr>
 						<th class="head">Name</th>
 						<th class="head">Expiry Date</th>
-						<th class ="daysLeft">Days Left</th>
+						<th class="daysLeft">Days Left</th>
 						<th class="head">Remove</th>
 						
 					</tr>
 			</thead>
 			
-			<tbody id = "table_body">
+			<tbody id="table_body">
 					
 			</tbody>
 			
@@ -81,23 +130,6 @@
 		
 	</div>
 		
-	<footer class="nav">
-		<div class="footerFridge">
-			<a href="fridge.html"><img src="images/fridge.png" alt="Fridge"></a>
-		</div>
-		<div class="footerAbout">
-			<a href="about_us.html"><img src="images/person.png" alt="person"></a>
-		</div>
-		<div class="footerContact">
-			<a href="contact_us.html"><img src="images/phone.png" alt="Contact"></a>
-		</div>
-		
-		<div class="footerInfo">
-			<a href="info.html"><img src="images/magnifying.png" alt="Info"></a>
-		</div>
-	</footer>
-	
-
 	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 	<script>
 	// Initialize Firebase
@@ -111,7 +143,8 @@
 	};
 	firebase.initializeApp(config);
 	</script>
-
+	
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
  <!-- We comment out the new verison of JQUERY <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
 	
 	<script src = "index.js"> </script>

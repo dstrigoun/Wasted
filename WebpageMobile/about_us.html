@@ -7,12 +7,29 @@
 </head>
 
 <body>
-	<header>	
-		<div id="login">
+	<header class="header_logo">
 			<button id="signOutBtn"></button>
 		</div>
-		
 	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="about_us.html">About Us</a>
+		<a href="fridge.html">MyFridge</a>
+		<a href="contact_us.html">Contact Us</a>
+		<a href="affiliate.html">Affiliates</a>
+		 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 	
 	<div id="content">	
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. 
@@ -30,30 +47,7 @@
 		tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor,
 		vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis.</p>
 	</div>
-	
-	<aside>
-	
-	</aside>
-	
-	<footer class="nav">
-		<div class="footerFridge">
-			<a href="fridge.html"><img src="images/fridge.png" alt="fridge"></a>
-		</div>
-		<div class="footerAbout">
-			<a href="about_us.html"><img src="images/person.png" alt="person"></a>
-		</div>
-		<div class="footerContact">
-			<a href="contact_us.html"><img src="images/phone.png" alt="Contact"></a>
-		</div>
-		
-		<div class="footerInfo">
-			<a href="info.html"><img src="images/magnifying.png" alt="fridge"></a>
-		</div>
-	</footer>
-	
-	
-	
-	
+
 		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 	<script>
 	// Initialize Firebase
@@ -68,10 +62,9 @@
 	firebase.initializeApp(config);
 	</script>
 
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 	
 	<script src = "index.js"> </script>
-
 </body>
 
 </html>

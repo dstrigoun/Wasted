@@ -1,7 +1,7 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/links.html'
+	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/fridge.html'
   } else {
     // No user is signed in.
   }
