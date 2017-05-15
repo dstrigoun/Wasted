@@ -1,3 +1,4 @@
+
 /** THIS RUNS WHEN THE USERS LOGIN STATE CAHANGES **/
 
 var firebaseRef = firebase.database().ref();
@@ -331,3 +332,6 @@ $("#signOutBtn").click(
 	
   }
 );
+
+
+
