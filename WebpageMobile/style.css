@@ -306,3 +306,114 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+/*css for the fridge page*/
+#fridgePage {
+    height: 295px;
+	position: relative;
+}
+
+#add_item {
+    width: 73%;
+    margin: 0 auto;
+}
+
+#add_item th {
+    float: left;
+}
+
+#itemName {
+    width: 100%;
+}
+#datepicker {
+    width: 100%;
+}
+form#add_item {
+    margin-top: 7%;
+}
+
+#add {
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius:36px;
+	margin-top: 4%;
+	margin-bottom: 10%;
+	float: right;
+}
+label.fPage {
+    font-size: 1.6em;
+    float: left;
+	width: 100%;
+}
+/*
+#remind {
+    width: 59%;
+    font-size: 1.6em;
+	float:left;
+    margin-top: 2%;
+}
+input[type="radio"] {
+    margin-left: 8%;
+}
+*/
+
+
+
+/** FRIDGE STYLING **/
+
+#fridge th {
+    width: 33%;
+}
+#fridge {
+    width: 100%;
+	border-collapse: collapse;
+}
+thead {
+    background-color: #4CAF50;
+	color: white;
+}
+
+}
+#table_body td {
+    width: 33%;
+}
+#table_body {
+	margin-top:7%;
+    width: 100%;
+	border-collapse: collapse;
+	text-align:center;
+}
+#table_body tr:nth-child(even){background-color: #f2f2f2}
+
+#table_body tr {
+    border: 1px solid black;
+	    height: 120px;
+}
+#table_body button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 36px;
+}
+th.head {
+    padding: 2px 0px;
+    line-height: 52px;
+}
+
