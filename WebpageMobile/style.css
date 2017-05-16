@@ -132,7 +132,7 @@ header {
 		background-size: cover;
 	}
 	
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
 	#background {
 		background-image: url('images/nature.jpg');
 	}
@@ -254,7 +254,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -262,7 +262,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
