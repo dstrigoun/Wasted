@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>tips</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<header class="header_logo">	
+			<div id="login">
+				<button id="signOutBtn"></button>
+			</div>
+		</header>
+		<div class="topnav" id="myTopnav">
+			<a href="fridge.html">MyFridge</a>
+			<a href="contact_us.html">Contact Us</a>
+			<a href="about_us.html">About Us</a>
+			<a href="affiliate.html">Affiliates</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
+
+
+		<input type="text" id="myInput" onkeyup="searchFood()" placeholder="Search for foods..">
+
+		<table id="myTable">
+  			<tr class="header">
+    			<th style="width:80%;">Name</th>
+    			<th style="width:20%;">More Info</th>
+  			</tr>
+  			<tr>
+    			<td>Apples</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Asparagus</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Basil</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Mushrooms</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Potatoes</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Yoghurt</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Milk</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Chicken</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Eggs</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Bananas</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+  			<tr>
+    			<td>Spinach</td>
+    			<td><button>More Info</button></td>
+  			</tr>
+
+		</table>
+
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
+				authDomain: "fir-web-learn-6d987.firebaseapp.com",
+				databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
+				projectId: "fir-web-learn-6d987",
+				storageBucket: "fir-web-learn-6d987.appspot.com",
+				messagingSenderId: "15555479095"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="index.js"></script>
+		<script src="storage.js"></script>
+
+		<script>
+			function searchFood() {
+
+  				var input, filter, table, tr, td, i;
+  				input = document.getElementById("myInput");
+  				filter = input.value.toUpperCase();
+  				table = document.getElementById("myTable");
+  				tr = table.getElementsByTagName("tr");
+
+
+  				for (i = 0; i < tr.length; i++) {
+    				td = tr[i].getElementsByTagName("td")[0];
+    				if (td) {
+    			  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+     			   			tr[i].style.display = "";
+     					} else {
+        					tr[i].style.display = "none";
+      					}
+    				} 
+  				}
+			}
+
+		</script> 
+	</body>
+</html>
