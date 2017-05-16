@@ -32,23 +32,42 @@
 	</script>
 	
 	<div id="content">	
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. 
-		Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo 
-		magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque 
-		habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra 
-		nonummy pede. Mauris et orci. Aenean nec lorem.</p>
+		<p>Alex A.</p>
 		
-		<p>In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae,
-		pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede 
-		non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula.
-		Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget 
-		sapien.Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem 
-		in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi 
-		tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor,
-		vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis.</p>
+		<p>Simran S.</p>
+
+		<p>Dasha S.</p>
+
+		<p>Misha S.</p>
+
+		<p>Bhagwan V.</p>
+
+		<h2>Contact Us!</h2>
+		<form name="contactUs" method="post" action="#">
+			<table id="contact">
+				<tr>
+					<th><label class="cName" for="name">Full Name: </label></th>
+					<td><input type="text" name="name" id="name" placeholder="Enter Name..."></td>
+				</tr>
+
+				<tr>
+					<th><label class="cEmail" for="email">Email: </label></th>
+					<td><input type="text" name="email" id="email" placeholder="Enter Email..."></td>
+				</tr>
+
+				<tr>
+					<th><label class="cComment" for="comment">Comment: </label></th>
+					<td><textarea name="comment" form="contactUs" rows="3" columns="50">Enter text here...</textarea></td>
+				</tr>
+
+				<tr>
+					<th><button id="submitCon">Submit</button></th>
+				</tr>
+			</table>
+		</form>
 	</div>
 
-		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 	<script>
 	// Initialize Firebase
 	var config = {
@@ -65,6 +84,7 @@
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 	
 	<script src = "index.js"> </script>
+
 </body>
 
 </html>
