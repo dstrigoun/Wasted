@@ -25,7 +25,7 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
 
 });
 if(user){
-		  window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
+		 window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
 	  }
 	}
 );

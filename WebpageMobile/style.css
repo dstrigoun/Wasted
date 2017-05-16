@@ -9,16 +9,20 @@ header {
 	background-repeat: no-repeat;
     background-position: center;
 }
+.header_logo{
+	height: 295px
+}
+.head {
+	font-size: 2.5em;	
+	margin: 0;
+    padding-bottom: 2%;
+}
 
 #index {
-	height: 435px;
+    width: 490px;
+    margin: 14px 105px;
 }
 
-/*css for the header*/
-.header_logo {
-	height: 295px;
-	
-}
 
 #signOutBtn {
 	float: right;
@@ -35,83 +39,57 @@ header {
 	border-radius:36px;
 	position:absolute;
 	right:0;
-	top: 242px;
+	top: 20px;
 }
-/*css for the home page*/
-#login_form {
-    width: 60%;
-    margin: 0 auto;
+/*css for the index page*/
+.index_form {    
+	width: 80%;
+	padding-top: 3%;
+	padding-bottom: 6%;
+    margin: 25px auto;
 }
-#sign_up {
-    width: 60%;
-    margin: 0 auto;
-	display: none;
+
+.index_form input {
+    width: 100%;
+	height: 65px;
+	border: 4px solid Gray;
+	font-size: 2.4em;
+	padding-left: 7px;
 }
-.home caption {
-    font-size: 3.5em;
-	padding-bottom: 10px;
+
+#signUpPassword {
+	margin-bottom: 10px;
 }
-.home label {
-    font-size: 2.5em;
+
+#loginPassword {
+	margin-bottom: 10px;
 }
-.home {
-	width:100%;
-}
-.home td {
-	width:100%;
-}
-#signUpEmail{
-	width:100%;
-}
-#signUpPassword{
-	width:100%;
-}
-#loginEmail{
-	width:100%;
-}
-#loginPassword{
-	width:100%;
-}
-input[type="text"] {
-    width: 195px;
-    height: 35px;
-	font-size: 1.7em;
-	border: 1px solid black;
-}
-input[type="password"] {
-    width: 195px;
-    height: 35px;
-    font-size: 1.7em;
-    border: 1px solid black;
-}
-#loginBtn {
-	float:right;
-}
-#signUpBtn {
-	float:right;
-}
-#form {
-    text-align: left;
-}
-#pop a{
+
+#pop a {
 	text-decoration: none;
     color: black;
     font-size: 1.6em;
 	color:white;
 }
+
 #pop {
 	background-color: #4CAF50;
 	border: 1px solid black;
 	width:29%;
-	margin: 65px auto;
+	margin: 15px auto;
 	text-align: center;
     border-radius: 36px;
 	padding: 5px 0;
-}}
+}
+
 #pop:active {
     background-color: #306F33;
 }
-#loginBtn{
+
+#sign_up {
+	display: none;
+}
+.indexB {
 	background-color: #4CAF50;
 	border: none;
     color: white;
@@ -119,28 +97,50 @@ input[type="password"] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.6em;
+    font-size: 2.3em;
     margin: 4px 2px;
     cursor: pointer;
+	border-radius: 36px;
+	float: right;
+	width: 100%;
 }
-#loginBtn:hover{
+.indexB:hover{
 	background-color: #306F33;
 }
-#signUpBtn{
-	background-color: #4CAF50;
-	border: none;
-    color: white;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.6em;
-    margin: 4px 2px;
-    cursor: pointer;
+
+#form {
+    margin-bottom: 200px;
+	position: static;
+	background-color: #dcdcdc;
+	border: 5px solid black;
+    border-radius: 30px;
+    width: 700px;
+	margin: 15% auto;
+	
 }
-#signUpBtn:hover{
-	background-color: #306F33;
+#form{
+	background-image: url('images/form.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
+
+#background {
+		background-image: url('images/nature_desktop.jpg');
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+@media screen and (max-width: 1500px) {
+	#background {
+		background-image: url('images/nature.jpg');
+	}
+}
+
+
+
+
 
 /*css for the footer*/
 footer {
@@ -149,10 +149,13 @@ footer {
     left: 0;
     width: 100%;
 	text-align: center;
-    height: 20px;
+    height: 150px;
     line-height: 120px;
     font-style: italic;
     font-size: 1.4em;
+	background-color:#555555;
+	color: white;
+	line-height: 150px;
 }
 
 /*css for the affiliate page*/
@@ -161,10 +164,6 @@ footer {
 	text-align: center;
 	font-size: 1.8em;
 	padding: 0 25px;
-}
-
-#affiliate {
-	margin-bottom: 200px;
 }
 
 #race {
@@ -197,6 +196,10 @@ footer {
 
 .alt {
 	background-color: #DCDCDC;
+	padding: 20px 0;
+}
+
+.alt1 {
 	padding: 20px 0;
 }
 
@@ -233,7 +236,13 @@ footer {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 2.5em;
+}
+
+.icon {
+	height: 46.4px;
+	line-height: 46.4px;
+	font-size:2.5em;
 }
 
 .topnav a:hover {
@@ -245,7 +254,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1500px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -253,7 +262,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1500px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -309,111 +318,4 @@ footer {
 
 
 
-/*css for the fridge page*/
-#fridgePage {
-    height: 295px;
-	position: relative;
-}
-
-#add_item {
-    width: 73%;
-    margin: 0 auto;
-}
-
-#add_item th {
-    float: left;
-}
-
-#itemName {
-    width: 100%;
-}
-#datepicker {
-    width: 100%;
-}
-form#add_item {
-    margin-top: 7%;
-}
-
-#add {
-	background-color: #4CAF50;
-	border: none;
-    color: white;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.6em;
-    margin: 4px 2px;
-    cursor: pointer;
-	border-radius:36px;
-	margin-top: 4%;
-	margin-bottom: 10%;
-	float: right;
-}
-label.fPage {
-    font-size: 1.6em;
-    float: left;
-	width: 100%;
-}
-/*
-#remind {
-    width: 59%;
-    font-size: 1.6em;
-	float:left;
-    margin-top: 2%;
-}
-input[type="radio"] {
-    margin-left: 8%;
-}
-*/
-
-
-
-/** FRIDGE STYLING **/
-
-#fridge th {
-    width: 33%;
-}
-#fridge {
-    width: 100%;
-	border-collapse: collapse;
-}
-thead {
-    background-color: #4CAF50;
-	color: white;
-}
-
-}
-#table_body td {
-    width: 33%;
-}
-#table_body {
-	margin-top:7%;
-    width: 100%;
-	border-collapse: collapse;
-	text-align:center;
-}
-#table_body tr:nth-child(even){background-color: #f2f2f2}
-
-#table_body tr {
-    border: 1px solid black;
-	    height: 120px;
-}
-#table_body button {
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 0.5em;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 36px;
-}
-th.head {
-    padding: 2px 0px;
-    line-height: 52px;
-}
 

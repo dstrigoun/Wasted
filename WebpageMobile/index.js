@@ -239,6 +239,7 @@ function removeClick(obj) {
 var z = 1;
 if (z == 1) {
 firebaseRef.orderByChild("expiry").on("child_added", snap => {
+	
 	var name = snap.child("name").val();
 	var expiry = snap.child("expiry").val();
 	var id = snap.key;
@@ -308,10 +309,16 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		}
     }
 	
+	
+			$(document).ready(function(){
+	$('#fridge').DataTable();
+	});
+	
   }); 
 
 }
 
+	
 
 
 /* LOGOUT PROCESS -- Signs out the current user */
