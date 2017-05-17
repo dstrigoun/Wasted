@@ -217,11 +217,6 @@ function capitalizeFirstLetter(string) {
 	
 	
 	var expiryText = expiryName.value;
-	var expiryTextAgain = expiryText.substr(6, 9);
-	var expiryTextFinal = expiryTextAgain + "/" + expiryText.substr(0, 5);
-	
-	alert(expiryTextFinal);
-	
 	
 	var author = firebase.auth().currentUser.uid;
 	var email = firebase.auth().currentUser.email;
@@ -323,28 +318,35 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
     }
 	
 	/** start of datables**/
-		$(document).ready(function() {
+		
+	$(document).ready(function() {
     var table = $('#fridge').DataTable();
- 
+	
+	
+	//var classHighlight = 'highlight'; 
+
+	//.click() will return the result of $('.thumbnail')
+	//I save it for future reference so I don't have to query the DOM again
+	
+	
+	/*
+	var $fridge = $('tr').click(function(e) {
+		e.preventDefault();
+		//run removeClass on every element
+		//if the elements are not static, you might want to rerun $('.thumbnail')
+		//instead of the saved $thumbs
+		//$fridge.removeClass(classHighlight);
+		//add the class to the currently clicked element (this)
+		
+		if (!$(this).hasClass('highlight')) {
+			//alert('this is NOT highlighted');
+			$(this).addClass('highlight');
+		}  
+		
+	});
+	
+	*/
     
-	/** changes the css on click **/
-	$('#fridge tbody').on( 'click', 'tr', function () {
-    /**
-		if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
-		
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-		*/
-		 $(this).toggleClass('selected');
-		
-		
-    } ); 
- 
- 
 	} );
 	/** end of datables **/
 	
@@ -354,7 +356,16 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 }
 
 /** click functionality **/
-
+	
+$(document).ready(function() {
+    $('#fridge tbody').on('click', 'tr', function() {
+		if($(this).hasClass('highlight')) {
+			$(this).removeClass('highlight');
+		} else {
+			$(this).addClass('highlight');
+		} 
+    });
+});
 	
 
 
