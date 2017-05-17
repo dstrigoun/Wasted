@@ -217,6 +217,11 @@ function capitalizeFirstLetter(string) {
 	
 	
 	var expiryText = expiryName.value;
+	var expiryTextAgain = expiryText.substr(6, 9);
+	var expiryTextFinal = expiryTextAgain + "/" + expiryText.substr(0, 5);
+	
+	alert(expiryTextFinal);
+	
 	
 	var author = firebase.auth().currentUser.uid;
 	var email = firebase.auth().currentUser.email;
