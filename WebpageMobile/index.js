@@ -208,7 +208,20 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 	var itemText = capitalizeFirstLetter(itemName.value);
+	
+	if(itemName.value == "Wasted" || itemName.value == "wasted") {
+		alert('you found the secret');
+		window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+		return false;
+	}
+	
+	
 	var expiryText = expiryName.value;
+	var expiryTextAgain = expiryText.substr(6, 9);
+	var expiryTextFinal = expiryTextAgain + "/" + expiryText.substr(0, 5);
+	
+	alert(expiryTextFinal);
+	
 	
 	var author = firebase.auth().currentUser.uid;
 	var email = firebase.auth().currentUser.email;
@@ -309,14 +322,42 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		}
     }
 	
+	/** start of datables**/
+		$(document).ready(function() {
+    var table = $('#fridge').DataTable();
+ 
+    
+	/** changes the css on click **/
+	$('#fridge tbody').on( 'click', 'tr', function () {
+    /**
+		if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+		
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+		*/
+		 $(this).toggleClass('selected');
+		
+		
+    } ); 
+ 
+ 
+	} );
+	/** end of datables **/
 	
-			$(document).ready(function(){
-	$('#fridge').DataTable();
-	});
 	
   }); 
 
 }
+
+/** click functionality **/
+
+	
+
+
 
 	
 

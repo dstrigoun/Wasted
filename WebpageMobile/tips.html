@@ -33,57 +33,57 @@
 
 		<input type="text" id="myInput" onkeyup="searchFood()" placeholder="Search for foods..">
 
-		<table id="myTable">
-  			<tr class="header">
-    			<th style="width:80%;">Name</th>
-    			<th style="width:20%;">More Info</th>
-  			</tr>
-  			<tr>
-    			<td>Apples</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Asparagus</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Basil</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Mushrooms</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Potatoes</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Yoghurt</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Milk</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Chicken</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Eggs</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Bananas</td>
-    			<td><button>More Info</button></td>
-  			</tr>
-  			<tr>
-    			<td>Spinach</td>
-    			<td><button>More Info</button></td>
-  			</tr>
 
-		</table>
+		<div id="accordion">
+			<div class="wrap">
+  				<h3>Apple</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+  				</div>
+  			</div>
+  			<div class="wrap">
+  				<h3>Banana</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+  				</div>
+  			</div>
+  			<div class="wrap">
+  				<h3>Carrot</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+  				</div>
+  			</div>
+  			<div class="wrap">
+  				<h3>Yoghurt</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+  				</div>
+  			</div>
+  			<div class="wrap">
+  				<h3>Milk</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+  				</div>
+  			</div>
+  			<div class="wrap">
+  				<h3>Eggs</h3>
+  			</div>
+  			<div class="inside">
+  				<div>
+    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+  				</div>
+  			</div>
+		</div>
 
 		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 		<script>
@@ -107,12 +107,12 @@
   				var input, filter, table, tr, td, i;
   				input = document.getElementById("myInput");
   				filter = input.value.toUpperCase();
-  				table = document.getElementById("myTable");
-  				tr = table.getElementsByTagName("tr");
+  				table = document.getElementById("accordion");
+  				tr = table.getElementsByClassName("wrap");
 
 
   				for (i = 0; i < tr.length; i++) {
-    				td = tr[i].getElementsByTagName("td")[0];
+    				td = tr[i].getElementsByTagName("h3")[0];
     				if (td) {
     			  		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
      			   			tr[i].style.display = "";
@@ -124,5 +124,14 @@
 			}
 
 		</script> 
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>
+  			$( function() {
+    			$( "#accordion" ).accordion({
+      			collapsible: true
+    			});
+  			} );
+  		</script>
 	</body>
 </html>

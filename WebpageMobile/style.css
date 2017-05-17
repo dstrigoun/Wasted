@@ -317,6 +317,7 @@ footer {
 }
 
 /* CSS for tips page */
+
 #myInput {
     background-image: url('images/searchicon.png');
     background-position: 10px 12px; 
@@ -327,13 +328,6 @@ footer {
     padding: 12px 20px 12px 40px; 
     border: 1px solid #ddd; 
     margin-bottom: 12px; 
-}
-
-#myTable {
-    border-collapse: collapse;
-    width: 100%; 
-    border: 1px solid #ddd; 
-    font-size: 18px;
 }
 
 
