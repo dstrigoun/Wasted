@@ -75,6 +75,7 @@
 						<tr>
 							<th><label class="fPage" for="info">Enter Additional Information: </label></th>
 							<td><input type="text" id="info" name="addinfo" placeholder="Additional Information..."></td>
+						</tr>
 					</table>	
 				
 						<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
@@ -83,7 +84,6 @@
 			</div>
 		</div>
 		
-		<button id = "button"></button>
 		<button onclick="expiryOrganized()">Sort by expiry</button>
 		<button onclick="alphabetOrganized()">Sort by alphabet</button>	
 		
@@ -109,19 +109,20 @@
 		
 	</div>
 		
-	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-	<script>
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
-		authDomain: "fir-web-learn-6d987.firebaseapp.com",
-		databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
-		projectId: "fir-web-learn-6d987",
-		storageBucket: "fir-web-learn-6d987.appspot.com",
-		messagingSenderId: "15555479095"
-	};
-	firebase.initializeApp(config);
-	</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAj1O3mHy232iMV6c7yBlXIqTf5iIaVep0",
+    authDomain: "wasted-bcc00.firebaseapp.com",
+    databaseURL: "https://wasted-bcc00.firebaseio.com",
+    projectId: "wasted-bcc00",
+    storageBucket: "wasted-bcc00.appspot.com",
+    messagingSenderId: "1030069725779"
+  };
+  firebase.initializeApp(config);
+</script>
 	
 	
 		 <script>
