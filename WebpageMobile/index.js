@@ -58,13 +58,30 @@ function capitalizeFirstLetter(string) {
 	}
 	
 	if(itemName.value == "Barrel Roll" || itemName.value == "barrel roll") {
-	/*
+		var cssAnimation = document.createElement('style');
+		cssAnimation.type = 'text/css';
+		var rules = document.createTextNode('@-webkit-keyframes roll {'+
+			'from {-webkit-transform: rotate(0deg)}' +
+			'to { -webkit-transform: rotate(360deg) }}');
+		cssAnimation.appendChild(rules);
+		document.getElementsByTagName("head")[0].appendChild(cssAnimation);
+		var rules2 = document.createTextNode('@-moz-keyframes roll {'+
+			'from {-moz-transform: rotate(0deg)}' +
+			'to { -moz-transform: rotate(360deg) }}');
+		cssAnimation.appendChild(rules2);
+		document.getElementsByTagName("head")[1].appendChild(cssAnimation);
+		var rules3 = document.createTextNode('@keyframes roll {'+
+			'from {transform: rotate(0deg)}' +
+			'to {transform: rotate(360deg) }}');
+		cssAnimation.appendChild(rules3);
+		document.getElementsByTagName("head")[2].appendChild(cssAnimation);
+	
 		document.getElementByTagName("body").style.-moz-animation-name = "roll";
 		document.getElementByTagName("body").style.-moz-animation-duration = "4s";
 		document.getElementByTagName("body").style.-moz-animation-iteration-count = "1";
 		document.getElementByTagName("body").style.-webkit-animation-name = "roll";
 		document.getElementByTagName("body").style.-webkit-animation-duration = "4s";
-		document.getElementByTagName("body").style.-webkit-animation-iteration-count = "1"; */
+		document.getElementByTagName("body").style.-webkit-animation-iteration-count = "1"; 
 		return false;
 	}
 	
@@ -86,12 +103,13 @@ function capitalizeFirstLetter(string) {
 	}
 	
 	if(itemName.value == "Simran" || itemName.value == "simran") {
-		//something baby related? 
+		alert('what is sleep?');
 		return false;
 	}
 	
 	if(itemName.value == "Bhagwan" || itemName.value == "bhagwan") {
-		//something sleep related??
+		alert('You should sleep more!!!! Try this cool soothing song!');\
+		window.location.href = "https://chickenonaraft.com";
 		return false;
 	}
 	
