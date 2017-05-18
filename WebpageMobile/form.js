@@ -1,25 +1,14 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-
-   
-	
-	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/links.html'
-
-
+	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/fridge.html'
   } else {
-
-    
-
     // No user is signed in.
-    
-
-
   }
 });
 
 
-/*SignIn Process */
+/*SignIn Process -- logs the user in*/
 
 $("#loginBtn").click(
 
@@ -34,19 +23,16 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
   var errorMessage = error.message;
         $("#signInError").show().text(errorMessage);
 
-  
-  
-  // ...
 });
 if(user){
-		  window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
+		 window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
 	  }
 	}
 );
 
 
 
-/*Signup Process */
+/*Signup Process -- signs the user up into the database*/
 
 $("#signUpBtn").click(
 
@@ -61,9 +47,6 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
   var errorMessage = error.message;
         $("#signUpError").show().text(errorMessage);
 
-  
-  
-  // ...
 });
 if(user){
 		  window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'
