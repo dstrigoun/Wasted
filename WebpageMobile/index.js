@@ -185,7 +185,7 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	
 	if (childAuthor == thisAuthor) {
 	
-		if ( expiry <= today && expiry.substring(6,10) <= yyyy) {
+		if ( expiry <= today ) {
 	
 	
 	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
