@@ -45,10 +45,53 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 	var itemText = capitalizeFirstLetter(itemName.value);
-	
+	//don't look at the stuff ahead too closely pls
 	if(itemName.value == "Wasted" || itemName.value == "wasted") {
-		alert('you found the secret');
 		window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+		return false;
+	}
+	
+	if(itemName.value == "Baby" || itemName.value == "baby") {
+		alert('goo goo ga ga?');
+		window.location.href = "http://imgur.com/a/f7YWK";
+		return false;
+	}
+	
+	if(itemName.value == "Barrel Roll" || itemName.value == "barrel roll") {
+	/*
+		document.getElementByTagName("body").style.-moz-animation-name = "roll";
+		document.getElementByTagName("body").style.-moz-animation-duration = "4s";
+		document.getElementByTagName("body").style.-moz-animation-iteration-count = "1";
+		document.getElementByTagName("body").style.-webkit-animation-name = "roll";
+		document.getElementByTagName("body").style.-webkit-animation-duration = "4s";
+		document.getElementByTagName("body").style.-webkit-animation-iteration-count = "1"; */
+		return false;
+	}
+	
+	if(itemName.value == "Alex" || itemName.value == "alex") {
+		alert('Please don\'t kill me Alex.');
+		window.location.href = "http://imgur.com/a/hy2aT";
+		return false;
+	}
+	
+	if(itemName.value == "Misha" || itemName.value == "misha") {
+		alert('oh boy, you guys are in for a treat');
+		window.location.href = "https://www.youtube.com/watch?v=nZMwKPmsbWE";
+		return false;
+	}
+	
+	if(itemName.value == "Dasha" || itemName.value == "dasha") {
+		alert('wow what a cool person! So smart and funny and cute!!!!');
+		return false;
+	}
+	
+	if(itemName.value == "Simran" || itemName.value == "simran") {
+		//something baby related? 
+		return false;
+	}
+	
+	if(itemName.value == "Bhagwan" || itemName.value == "bhagwan") {
+		//something sleep related??
 		return false;
 	}
 	
