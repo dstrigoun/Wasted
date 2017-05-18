@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     $("#signOutBtn").text("Sign in / Sign Up");
 
 
-	//window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'	
+	window.location = 'http://students.bcitdev.com/A00541112/WebpageMobile/index.html'	
 
 
 
@@ -108,7 +108,7 @@ function capitalizeFirstLetter(string) {
 	}
 	
 	if(itemName.value == "Bhagwan" || itemName.value == "bhagwan") {
-		alert('You should sleep more!!!! Try this cool soothing song!');\
+		alert('You should sleep more!!!! Try this cool soothing song!');
 		window.location.href = "https://chickenonaraft.com";
 		return false;
 	}
