@@ -56,7 +56,7 @@ function capitalizeFirstLetter(string) {
 		window.location.href = "http://imgur.com/a/f7YWK";
 		return false;
 	}
-	
+	/*
 	if(itemName.value == "Barrel Roll" || itemName.value == "barrel roll") {
 		var cssAnimation = document.createElement('style');
 		cssAnimation.type = 'text/css';
@@ -83,7 +83,7 @@ function capitalizeFirstLetter(string) {
 		document.getElementByTagName("body").style.-webkit-animation-duration = "4s";
 		document.getElementByTagName("body").style.-webkit-animation-iteration-count = "1"; 
 		return false;
-	}
+	}*/
 	
 	if(itemName.value == "Alex" || itemName.value == "alex") {
 		alert('Please don\'t kill me Alex.');
