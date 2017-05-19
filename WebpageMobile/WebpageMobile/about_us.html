@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasted</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header class="header_logo">
+			<button id="signOutBtn"></button>
+		</div>
+	</header>
+	
+	<div class="topnav" id="myTopnav">
+		<a href="about_us.html">About Us</a>
+		<a href="fridge.html">MyFridge</a>
+		<a href="affiliate.html">Affiliates</a>
+		<a href="tips.html">Tips</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+	
+	<div id="content">	
+		<p>Alex A.</p>
+		
+		<p>Simran S.</p>
+
+		<p>Dasha S.</p>
+
+		<p>Misha S.</p>
+
+		<p>Bhagwan V.</p>
+
+		<h2>Contact Us!</h2>
+		<form name="contactUs" method="post" action="#">
+			<table id="contact">
+				<tr>
+					<th><label class="cName" for="name">Full Name: </label></th>
+					<td><input type="text" name="name" id="name" placeholder="Enter Name..."></td>
+				</tr>
+
+				<tr>
+					<th><label class="cEmail" for="email">Email: </label></th>
+					<td><input type="text" name="email" id="email" placeholder="Enter Email..."></td>
+				</tr>
+
+				<tr>
+					<th><label class="cComment" for="comment">Comment: </label></th>
+					<td><textarea name="comment" form="contactUs" rows="3" columns="50">Enter text here...</textarea></td>
+				</tr>
+
+				<tr>
+					<th><button id="submitCon">Submit</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDaSug6WUrMPDSlcRO3OOU4yw0zXsJP3og",
+		authDomain: "fir-web-learn-6d987.firebaseapp.com",
+		databaseURL: "https://fir-web-learn-6d987.firebaseio.com",
+		projectId: "fir-web-learn-6d987",
+		storageBucket: "fir-web-learn-6d987.appspot.com",
+		messagingSenderId: "15555479095"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	
+	<script src = "index.js"> </script>
+</body>
+
+</html>
