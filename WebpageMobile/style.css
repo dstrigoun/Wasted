@@ -12,36 +12,47 @@ header {
 .header_logo{
 	height: 295px
 }
-.head {
-	font-size: 2.5em;	
+.head {	
 	margin: 0;
     padding-bottom: 2%;
 }
-
+.daysLeft {
+	margin: 0;
+    padding-bottom: 2%;
+}
 #index {
     width: 490px;
     margin: 14px 105px;
 }
 
-
 #signOutBtn {
 	float: right;
-	background-color: #4CAF50;
-	border: none;
+    background-color: #333;
+    border: none;
     color: white;
     padding: 6px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.6em;
+    border-radius: 30px;
+    font-size: 2em;
     margin-right: 30px;
     cursor: pointer;
-	border-radius:36px;
-	position:absolute;
-	right:0;
-	top: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
 }
-/*css for the index page*/
+/*css for the index page
+.error {
+	font-size: 2em;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 21px;
+    height: 70px;
+    line-height: 70px;
+}*/
+
 .index_form {    
 	width: 80%;
 	padding-top: 3%;
@@ -73,8 +84,7 @@ header {
 }
 
 #pop {
-	background-color: #4CAF50;
-	border: 1px solid black;
+	background-color: #4CAF50;	
 	width:29%;
 	margin: 15px auto;
 	text-align: center;
@@ -107,7 +117,6 @@ header {
 .indexB:hover{
 	background-color: #306F33;
 }
-
 #form {
     margin-bottom: 200px;
 	position: static;
@@ -138,10 +147,6 @@ header {
 	}
 }
 
-
-
-
-
 /*css for the footer*/
 footer {
 	z-index: 100; 
@@ -153,7 +158,7 @@ footer {
     line-height: 120px;
     font-style: italic;
     font-size: 1.4em;
-	background-color:#555555;
+	background-color:#333;
 	color: white;
 	line-height: 150px;
 }
@@ -209,7 +214,7 @@ footer {
 }
 
 .visit {
-	background-color: #4CAF50;
+	background-color: #333	;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -243,6 +248,7 @@ footer {
 	height: 46.4px;
 	line-height: 46.4px;
 	font-size:2.5em;
+	color: #f2f2f2;
 }
 
 .topnav a:hover {
@@ -254,7 +260,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -262,7 +268,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -278,11 +284,11 @@ footer {
 }
 
 /*css for pop up*/
-.modal {
+.modal2 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 36px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -298,15 +304,19 @@ footer {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 700px;
+    height: 580px;
+    border-radius: 30px;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: white;
     float: right;
-    font-size: 28px;
+    font-size: 55px;
     font-weight: bold;
+    padding: 5px 20px;
+    height: 71px;
 }
 
 .close:hover,
@@ -338,4 +348,173 @@ footer {
     border: 1px solid #ddd; 
     margin-bottom: 12px; 
 }
+/*css for the calender*/
+div.ui-datepicker {
+	font-size: 32px;
+}
+/*css for the fridge page*/
+@media screen and (max-width: 1100px) {
+	#myBtn {
+		float: right;
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 6px 30px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 5.5em;
+		margin-right: 30px;
+		cursor: pointer;
+		border-radius: 76px;
+		position: fixed;
+		right: 30px;
+		bottom: 55px;
+		z-index:1;
+	}
+}
+#add_item {
+    width: 80%;
+    margin: 5% auto;
+	background-color: #f2f2f2;
+    padding: 36px;
+	border-radius: 20px;
+}
+#formTitle {
+	font-size: 3.6em;
+    background-color: #333;
+    color: white;
+	padding: 7px 192px;
+	margin:0;
+	border-radius: 16px;
+}
+.fPage {
+	font-size: 2.3em;
+}
+.addInput {
+    width: 100%;
+    height: 35px;
+    font-size: 2.1em;
+    border: 1px solid grey;
+    padding: 2px 2px;
+	margin-bottom: 12px;
+}
 
+#add {
+	background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.6em;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+#removeAllButton {
+	background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.6em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
+
+}
+/*css for the table*/
+table.dataTable tbody tr { 
+	height: 150px;
+	font-size:2.25em;
+}
+
+#fridge_length {
+    font-size: 2.25em;
+}
+#fridge_length select {
+    font-size: 1.15em;
+}
+#fridge_filter {
+    font-size: 2.25em;
+}
+input[type="search"] {
+    font-size: 1em;
+	margin-right: 2px;
+    border: 1px solid black;
+}
+
+#fridge thead {
+    font-size: 2.25em;
+}
+#fridge_paginate {
+    font-size: 2.25em;
+}
+#fridge_info {
+    font-size: 2.25em;
+}
+#place_holder {
+    padding: 15px 0;
+}
+#table_body {
+    text-align: center;
+}
+
+/*css for pop up2*/
+
+.modal a.close-modal[class*="icon-"] {
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  background: #900;
+  border: 2px solid #fff;
+  -webkit-border-radius:  26px;
+  -moz-border-radius:     26px;
+  -o-border-radius:       26px;
+  -ms-border-radius:      26px;
+  -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* CSS for selected tr*/
+
+.highlight {
+    color: green;
+    font-weight: bold;
+	font-size: 1.5em;
+	border-style: 3px solid black;
+}
+
+tr:hover td { border-style: solid;}
+
+/*css for the tips page*/
+#food{
+	width: 100%;
+    background-color: #d2d2d2;
+    height: 110px;
+}
+#myInput {
+    padding: 0;
+    font-size: 3.25em;
+    border: 1px solid black;
+    width: 70%;
+    border-radius: 50px;
+    padding-left: 20px;
+    margin-top: 24px;
+    margin-left: 16px;
+}
+#accordion {
+    font-size: 2.5em;
+}

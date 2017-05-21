@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     
 	//user is signed in
-   $("#signOutBtn").text("Welcome " + firebase.auth().currentUser.email + ". Click to logout");
+   $("#signOutBtn").text(firebase.auth().currentUser.email + "| Logout");
 
    
   } else {
@@ -40,6 +40,7 @@ function submitClick() {
 	
 var itemName = document.getElementById("itemName");
 var expiryName = document.getElementById("datepicker");
+var itemInfo = document.getElementById('info');
 var firebaseRef = firebase.database().ref();	
 
 
@@ -58,35 +59,7 @@ function capitalizeFirstLetter(string) {
 		window.location.href = "http://imgur.com/a/f7YWK";
 		return false;
 	}
-	/*
-	if(itemName.value == "Barrel Roll" || itemName.value == "barrel roll") {
-		var cssAnimation = document.createElement('style');
-		cssAnimation.type = 'text/css';
-		var rules = document.createTextNode('@-webkit-keyframes roll {'+
-			'from {-webkit-transform: rotate(0deg)}' +
-			'to { -webkit-transform: rotate(360deg) }}');
-		cssAnimation.appendChild(rules);
-		document.getElementsByTagName("head")[0].appendChild(cssAnimation);
-		var rules2 = document.createTextNode('@-moz-keyframes roll {'+
-			'from {-moz-transform: rotate(0deg)}' +
-			'to { -moz-transform: rotate(360deg) }}');
-		cssAnimation.appendChild(rules2);
-		document.getElementsByTagName("head")[1].appendChild(cssAnimation);
-		var rules3 = document.createTextNode('@keyframes roll {'+
-			'from {transform: rotate(0deg)}' +
-			'to {transform: rotate(360deg) }}');
-		cssAnimation.appendChild(rules3);
-		document.getElementsByTagName("head")[2].appendChild(cssAnimation);
-	
-		document.getElementByTagName("body").style.-moz-animation-name = "roll";
-		document.getElementByTagName("body").style.-moz-animation-duration = "4s";
-		document.getElementByTagName("body").style.-moz-animation-iteration-count = "1";
-		document.getElementByTagName("body").style.-webkit-animation-name = "roll";
-		document.getElementByTagName("body").style.-webkit-animation-duration = "4s";
-		document.getElementByTagName("body").style.-webkit-animation-iteration-count = "1"; 
-		return false;
-	}*/
-	
+		
 	if(itemName.value == "Alex" || itemName.value == "alex") {
 		alert('Please don\'t kill me Alex.');
 		window.location.href = "http://imgur.com/a/hy2aT";
@@ -119,7 +92,7 @@ function capitalizeFirstLetter(string) {
 	var expiryText = expiryName.value;
 	var expiryTextAgain = expiryText.substr(6, 9);
 	var expiryTextFinal = expiryTextAgain + "/" + expiryText.substr(0, 5);
-	
+	var intoText = itemInfo.value;
 	
 	
 	
@@ -130,7 +103,8 @@ function capitalizeFirstLetter(string) {
 		'expiry': expiryTextFinal,
 		'name': itemText,
 		'author': author,
-		'email': email
+		'email': email,
+		'info': intoText 
 	});
 	
 	window.location.reload();
@@ -202,20 +176,18 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	
 
 	
-	
 	if (childAuthor == thisAuthor) {
 	
 		if ( expiry <= today ) {
 	
 	
-	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
-	
+	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>';
 	$(html).appendTo('#table_body');
 	
 		} else if ( expiry == todayAgain || expiry == todayAgainAgain) {
 		
 	
-	var html = '<tr style ="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
+	var html = '<tr style="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
 	
 	
 	$(html).appendTo('#table_body');
@@ -223,12 +195,13 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		
 		}else {
 			
-	var html = '<tr id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td><td><button onclick = "removeClick(this)" id ="'+id+'">Remove</button></td></tr>'; 
+	var html = '<tr style="background-color: #ddd;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
 	
 	$(html).appendTo('#table_body');
 			
 		}
     }
+	
 	
 	/** start of datables**/
 	$(document).ready(function() {
@@ -272,13 +245,81 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	
 $(document).ready(function() {
     $('#fridge tbody').on('click', 'tr', function() {
+		
 		if($(this).hasClass('highlight')) {
+
+			
+			
+			var id = $(this).attr("id")
+		
+				var name1 = firebaseRef.child(id);
+		
+				name1.once("value", function(dataSnapshot) {
+					test = dataSnapshot.child('expiry').val();
+		
+					test2 = dataSnapshot.child('name').val();
+					
+					test3 = dataSnapshot.child('info').val();
+		
+						var element = document.getElementById("ex1");
+						element.innerHTML = 
+						 "<font size=4 color=blue>" +
+						"<b>Your Selected Item:</b>" +
+						"</font>" + 
+						"<br>" +
+						"<b>Name: </b>" + test2 + 
+						"<br>" + 
+						"<b>Expiry: </b>" + test  +
+						"<br>" 
+						+ "<b>Info: </b>" + test3
+						
+						;
+					$('#ex1').modal();
+					
+				});
+
+				
 			$(this).removeClass('highlight');
 		} else {
 			$(this).addClass('highlight');
 		} 
+		
+		
+		
     });
 });
+	
+	/* Remove all click */
+
+function removeAllClick() {
+		//alert('working');
+		$("tr").each(function() {
+		//	if (tr.hasClass('highlight')) {
+			//	var id = $(this).attr("id");
+				//firebaseRef.child(id).remove();
+				//window.location.reload();
+				var id = $(this).attr("id");
+				if ($(this).hasClass('highlight')) {
+					firebaseRef.child(id).remove();
+					window.location.reload();
+				}
+				//alert(id);
+			});
+		};
+    
+
+
+	
+	
+	/* Remove click */
+function removeClick(obj) {
+	var id = obj.id;
+	//alert(id);
+	firebaseRef.child(id).remove();
+	window.location.reload();
+}
+
+
 	
 
 
