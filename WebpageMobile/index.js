@@ -263,15 +263,20 @@ $(document).ready(function() {
 		
 						var element = document.getElementById("ex1");
 						element.innerHTML = 
-						 "<font size=4 color=blue>" +
+						 "<font size=10 color=green>" +
 						"<b>Your Selected Item:</b>" +
 						"</font>" + 
+						"<font size=6>" +
+						"<br>" +
 						"<br>" +
 						"<b>Name: </b>" + test2 + 
-						"<br>" + 
+						"<br>" +
+						"<br>" +						
 						"<b>Expiry: </b>" + test  +
+						"<br>" +
 						"<br>" 
-						+ "<b>Info: </b>" + test3
+						+ "<b>Info: </b>" + test3 +
+						"</font>"
 						
 						;
 					$('#ex1').modal();
