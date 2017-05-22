@@ -30,9 +30,10 @@
 			}
 		</script>
 
-
-		<input type="text" id="myInput" onkeyup="searchFood()" placeholder="Search for foods..">
-
+		<div id="food">
+			<input type="text" id="myInput" onkeyup="searchFood()" placeholder="&#9906 Search for foods..">
+		</div>
+		
 		<div id="accordion">
 			<div class="wrap">
   				<h3>Apple</h3>
@@ -97,7 +98,7 @@
 			};
 			firebase.initializeApp(config);
 		</script>
-		<script src="index.js"></script>
+		<!--<script src="index.js"></script>-->
 		<script src="storage.js"></script>
 
 		<script>

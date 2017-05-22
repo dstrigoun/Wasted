@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     
 	//user is signed in
-   $("#signOutBtn").text("Welcome " + firebase.auth().currentUser.email + ". Click to logout");
+   $("#signOutBtn").text(firebase.auth().currentUser.email + "| Logout");
 
    
   } else {
@@ -176,7 +176,6 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	
 
 	
-	
 	if (childAuthor == thisAuthor) {
 	
 		if ( expiry <= today ) {
@@ -188,7 +187,7 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		} else if ( expiry == todayAgain || expiry == todayAgainAgain) {
 		
 	
-	var html = '<tr style ="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
+	var html = '<tr style="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
 	
 	
 	$(html).appendTo('#table_body');
@@ -196,12 +195,13 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		
 		}else {
 			
-	var html = '<tr id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
+	var html = '<tr style="background-color: #ddd;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
 	
 	$(html).appendTo('#table_body');
 			
 		}
     }
+	
 	
 	/** start of datables**/
 	$(document).ready(function() {
@@ -263,15 +263,20 @@ $(document).ready(function() {
 		
 						var element = document.getElementById("ex1");
 						element.innerHTML = 
-						 "<font size=4 color=blue>" +
+						 "<font size=10 color=green>" +
 						"<b>Your Selected Item:</b>" +
 						"</font>" + 
+						"<font size=6>" +
+						"<br>" +
 						"<br>" +
 						"<b>Name: </b>" + test2 + 
-						"<br>" + 
+						"<br>" +
+						"<br>" +						
 						"<b>Expiry: </b>" + test  +
+						"<br>" +
 						"<br>" 
-						+ "<b>Info: </b>" + test3
+						+ "<b>Info: </b>" + test3 +
+						"</font>"
 						
 						;
 					$('#ex1').modal();
