@@ -36,7 +36,7 @@
 
 	</head>
 
-<body>
+<body onload ="loadFunction()" style "margin: 0;">
 	<a href = "fridge.html">
 	<header class="header_logo">	
 		<div id="login">
@@ -94,6 +94,9 @@
 			
 	<div id="place_holder">	
 	
+	
+		<div id="loader"></div>
+		<div style="display:none;" id="myDiv" class="animate-bottom">
 		<table id="fridge"  class="display">
 			<thead>
 					<tr>
@@ -155,6 +158,19 @@
 				}
 			}
 		</script>
+		
+		<script>
+var myVar;
+
+	function loadFunction() {
+    myVar = setTimeout(showPage, 1500);
+	}
+
+	function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+	}
+	</script>
 	
 	
 	<script src = "index.js"> </script>
