@@ -353,3 +353,23 @@ $("#signOutBtn").click(
 
 
 
+/** Add apple to form **/
+
+$("#appleBtn").click(
+
+function(){
+	
+	
+	    
+        var text = $('#itemName');
+        text.val(text.val() + 'Apples');    
+    
+	
+	
+	}
+
+);
+
+
+
+
