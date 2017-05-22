@@ -9,7 +9,7 @@
 		
 	
 	
-	<link rel = "stylesheet" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link rel = "stylesheet" href="table.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -88,8 +88,6 @@
 		<div id="ex1" style="display:none;">
 			<p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
 		</div>
-		
-		<button id="removeAllButton" onclick = "removeAllClick()">Remove Selected Item(s)</button>
 			
 	<div id="place_holder">	
 	
@@ -99,7 +97,7 @@
 						<th class="head">Name</th>
 						<th class="head">Expiry Date</th>
 						<th class="daysLeft">Days Left</th>
-				</tr>
+					</tr>
 			</thead>
 			
 			<tbody id="table_body">
@@ -107,7 +105,7 @@
 			</tbody>
 			
 		</table>
-		
+		<button id="removeAllButton" onclick = "removeAllClick()">Remove Selected Item(s)</button>
 	</div>
 		
 
