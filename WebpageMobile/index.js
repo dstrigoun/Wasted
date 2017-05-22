@@ -159,9 +159,11 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 	var yearsLeft = expiry.substring(0, 4);
 	var moreYears = yearsLeft - yyyy;
 	
+	if ( yearsLeft == yyyy && monthsLeft > mm ) {
 	
+	daysLeft = 30 - expiry.substring(8, 10);
 	
-	if(yearsLeft > yyyy && monthsLeft >= mm){
+	} else if(yearsLeft > yyyy && monthsLeft >= mm){
 		
 		daysLeft = "~year";
 		
@@ -358,18 +360,354 @@ $("#signOutBtn").click(
 $("#appleBtn").click(
 
 function(){
-	
-	
-	    
         var text = $('#itemName');
-        text.val(text.val() + 'Apples');    
-    
+        text.val('Apples'); 
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+2; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 14;
+	var dddd = today.getDate() + 1;
+		
+	if(dd<10) {
+		dd='0'+dd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	} 
+		
+	if ( ddd > 30 ) {
+		
+		ddd = 30 - 14;
+		mm = mm + 1;
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+
+		
+	}
+
+);
+
+/** Add Bananas to form */
+
+$("#bananaBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Bananas'); 
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 6;
+	var dddd = today.getDate() + 1;
+		
+
+		
+	if ( ddd > 30 ) {
+		
+		ddd = 30 - 6;
+		mm = mm + 1;
+		
+			if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	} 
+		
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+		
+	}
+
+);
+
+/**Add milk to form **/
+
+$("#milkBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Milk'); 
+
+		var dateAgain = $('#datepicker');
+		dateAgain.val("");
+
+		
+	}
+
+);
+
+/** Add eggs to form **/
+
+$("#eggBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Eggs');    
+	
+		var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 14;
+	var dddd = today.getDate() + 1;
+		
+
+		
+	if ( ddd > 30 ) {
+		
+		ddd = 30 - 14;
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+		
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
 	
 	
 	}
 
 );
 
+/**Cheese **/
 
+$("#cheeseBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Cheese'); 
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 21;
+	var dddd = today.getDate() + 1;
+		
+ 
+		
+	if ( ddd > 30 ) {
+		
+		ddd = 30 - 21;
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+		
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);		
+
+			
+	}
+
+);
+
+/** Butter **/
+
+$("#butterBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Butter'); 
+
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 14;
+	var dddd = today.getDate() + 1;
+		
+
+		
+	if ( ddd > 30 ) {
+		
+		ddd = 30 - 14;
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+	}
+
+);
+
+/** Carrots **/
+
+$("#carrotBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Carrots');  
+
+			var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+2; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 2;
+	var dddd = today.getDate() + 1;
+		
+
+		
+			if ( ddd > 30 ) {
+		
+		ddd = 30 - ddd.value();
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+	}
+		
+	today = mm + '/' + dd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+		
+	}
+
+);
+
+/** Beef **/
+
+$("#beefBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Beef'); 
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 3;
+	var dddd = today.getDate() + 1;
+		
+
+		
+			if ( ddd > 30 ) {
+		
+		ddd = 30 - ddd.value();
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+	}
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+	}
+
+);
+
+/** Chicken **/
+
+$("#chickenBtn").click(
+
+function(){
+        var text = $('#itemName');
+        text.val('Chicken');
+
+	var today = new Date();
+	var todayAgain = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	var ddd = today.getDate() + 2;
+	var dddd = today.getDate() + 1;
+		
+
+	
+		if ( ddd > 30 ) {
+		
+		ddd = 30 - ddd.value();
+		mm = mm + 1;
+		
+					if(ddd<10) {
+		ddd='0'+ddd
+	} 
+
+	if(mm<10) {
+		mm='0'+mm
+	}
+		
+	}
+		
+		
+	today = mm + '/' + ddd + '/' + yyyy;
+	
+	var dateAgain = $('#datepicker');
+	dateAgain.val(today);
+	
+		
+	}
+
+);
 
 

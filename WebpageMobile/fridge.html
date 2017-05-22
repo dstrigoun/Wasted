@@ -38,11 +38,11 @@
 
 <body onload ="loadFunction()" style "margin: 0;">
 	<a href = "fridge.html">
-	<header class="header_logo">	
-		<div id="login">
-			<button id="signOutBtn"></button>
-		</div>
-	</header>
+		<header class="header_logo">	
+			<div id="login">
+				<button id="signOutBtn"></button>
+			</div>
+		</header>
 	</a>
 	
 	<div class="topnav" id="myTopnav">
@@ -82,9 +82,29 @@
 					<input type="text" class="addInput" id="info" name="addinfo" placeholder="Information..."><br>
 					
 					<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
-					<input type ="button" id="appleBtn" alt="Add" value="Add To MyFridge"></input>
-						
-				</form>
+					
+					</form>
+					<div id="picAdd">
+						<button class="test" id="chickenBtn"><img class="pics" src="images/chicken.jpg" alt="Chicken"></button>
+						<h1>Chicken</h1>
+						<button class="test" id="beefBtn"><img class="pics" src="images/beef.png" alt="Beef"></button>
+						<h1>Beef</h1>
+						<button class="test" id="carrotBtn"><img class="pics" src="images/carrots.jpg" alt="Carrot"></button>
+						<h1>Carrot</h1>
+						<button class="test" id="butterBtn"><img class="pics" src="images/butter.jpg" alt="Butter"></button>
+						<h1>Butter</h1>
+						<button class="test" id="cheeseBtn"><img class="pics" src="images/cheese.jpg" alt="Cheese"></button>
+						<h1>Cheese</h1>
+						<button class="test" id="eggBtn"><img class="pics" src="images/eggs.jpg" alt="Egg"></button>
+						<h1>Egg</h1>
+						<button class="test" id="milkBtn"><img class="pics" src="images/milk.jpg" alt="Milk"></button>
+						<h1>Milk</h1>
+						<button class="test" id="bananaBtn"><img class="pics" src="images/banana.jpg" alt="Banana"></button>
+						<h1>Banana</h1>
+						<button class="test" id="appleBtn"><img class="pics" src="images/apple.jpg" alt="Apple"></button>
+						<h1>Apple</h1>
+					</div>
+				
 			</div>
 		</div>
 		
@@ -93,7 +113,6 @@
 		</div>
 			
 	<div id="place_holder">	
-	
 	
 		<div id="loader"></div>
 		<div style="display:none;" id="myDiv" class="animate-bottom">
@@ -158,12 +177,12 @@
 				}
 			}
 		</script>
-		
-		<script>
-var myVar;
+	
+	<script>
+	var myVar;
 
 	function loadFunction() {
-    myVar = setTimeout(showPage, 1500);
+    myVar = setTimeout(showPage, 100);
 	}
 
 	function showPage() {
@@ -171,7 +190,6 @@ var myVar;
   document.getElementById("myDiv").style.display = "block";
 	}
 	</script>
-	
 	
 	<script src = "index.js"> </script>
 	
