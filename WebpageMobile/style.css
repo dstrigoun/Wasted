@@ -502,3 +502,9 @@ tr:hover td { border-style: solid;}
 #accordion {
     font-size: 2.5em;
 }
+
+#wastedVideo {
+    padding: 5px;
+    margin: 20px;
+    display: inline-block;
+}
