@@ -84,25 +84,26 @@
 					<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
 					
 					</form>
+					
 					<div id="picAdd">
-						<button class="test" id="chickenBtn"><img class="pics" src="images/chicken.jpg" alt="Chicken"></button>
-						<h1>Chicken</h1>
-						<button class="test" id="beefBtn"><img class="pics" src="images/beef.png" alt="Beef"></button>
-						<h1>Beef</h1>
-						<button class="test" id="carrotBtn"><img class="pics" src="images/carrots.jpg" alt="Carrot"></button>
-						<h1>Carrot</h1>
-						<button class="test" id="butterBtn"><img class="pics" src="images/butter.jpg" alt="Butter"></button>
-						<h1>Butter</h1>
-						<button class="test" id="cheeseBtn"><img class="pics" src="images/cheese.jpg" alt="Cheese"></button>
-						<h1>Cheese</h1>
-						<button class="test" id="eggBtn"><img class="pics" src="images/eggs.jpg" alt="Egg"></button>
-						<h1>Egg</h1>
-						<button class="test" id="milkBtn"><img class="pics" src="images/milk.jpg" alt="Milk"></button>
-						<h1>Milk</h1>
-						<button class="test" id="bananaBtn"><img class="pics" src="images/banana.jpg" alt="Banana"></button>
-						<h1>Banana</h1>
-						<button class="test" id="appleBtn"><img class="pics" src="images/apple.jpg" alt="Apple"></button>
-						<h1>Apple</h1>
+						<button class="test" id="chickenBtn"><img class="pics" src="images/chicken.jpg" alt="Chicken"><br>
+						<h1 class="picTitle">Chicken</h1></button>
+						<button class="test" id="beefBtn"><img class="pics" src="images/beef.png" alt="Beef"><br>
+						<h1 class="picTitle">Beef</h1></button>
+						<button class="test" id="carrotBtn"><img class="pics" src="images/carrots.jpg" alt="Carrot"><br>
+						<h1 class="picTitle">Carrot</h1></button>
+						<button class="test" id="butterBtn"><img class="pics" src="images/butter.jpg" alt="Butter"><br>
+						<h1 class="picTitle">Butter</h1></button>
+						<button class="test" id="cheeseBtn"><img class="pics" src="images/cheese.jpg" alt="Cheese"><br>
+						<h1 class="picTitle">Cheese</h1></button>
+						<button class="test" id="eggBtn"><img class="pics" src="images/eggs.jpg" alt="Egg"><br>
+						<h1 class="picTitle">Egg</h1></button>
+						<button class="test" id="milkBtn"><img class="pics" src="images/milk.jpg" alt="Milk"><br>
+						<h1 class="picTitle">Milk</h1></button>
+						<button class="test" id="bananaBtn"><img class="pics" src="images/banana.jpg" alt="Banana"><br>
+						<h1 class="picTitle">Banana</h1></button>
+						<button class="test" id="appleBtn"><img class="pics" src="images/apple.jpg" alt="Apple"><br>
+						<h1 class="picTitle">Apple</h1></button>
 					</div>
 				
 			</div>
@@ -117,6 +118,8 @@
 		<div id="loader"></div>
 		<div style="display:none;" id="myDiv" class="animate-bottom">
 		<table id="fridge"  class="display">
+		<button id="removeBtn" class="removeAllButton" onclick = "removeAllClick()">Remove Selected Item(s)</button>
+		
 			<thead>
 					<tr>
 						<th class="head">Name</th>
@@ -130,7 +133,7 @@
 			</tbody>
 			
 		</table>
-		<button id="removeAllButton" onclick = "removeAllClick()">Remove Selected Item(s)</button>
+		<button class="removeAllButton" onclick = "removeAllClick()">Remove Selected Item(s)</button>
 	</div>
 		
 

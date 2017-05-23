@@ -414,7 +414,7 @@ div.ui-datepicker {
     border-radius: 12px;
     margin-top: 12px;
 }
-#removeAllButton {
+.removeAllButton {
 	background-color: #333;
     border: none;
     color: white;
@@ -426,7 +426,10 @@ div.ui-datepicker {
     cursor: pointer;
     width: 100%;
     margin-top: 12px;
+}
 
+#removeBtn {
+	margin-bottom:30px
 }
 /*css for the table*/
 table.dataTable tbody tr { 
@@ -438,7 +441,7 @@ table.dataTable tbody tr {
     font-size: 2.25em;
 }
 #fridge_length select {
-    font-size: 1.15em;
+    font-size: 1.1em;
 }
 #fridge_filter {
     font-size: 2.25em;
@@ -509,65 +512,70 @@ tr:hover td { border-style: solid;}
     display: inline-block;
 }
 
+
 .test {
-	height:183px;
-	width: 183px;
+    height: 183px;
+    margin-bottom: 71px;
+    width: 183px;
 }
 
 .pics {
 	height:183px;
 	width: 183px;
 }
-/* SPINNER */
 
+#picAdd {
+    width: 82%;
+    margin: 0 auto;
+}
+/* SPINNER */
 #loader {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 
 /* Add animation to "page content" */
 .animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
+	from { bottom:-100px; opacity:0 } 
+	to { bottom:0px; opacity:1 }
 }
 
 @keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
+	from{ bottom:-100px; opacity:0 } 
+	to{ bottom:0; opacity:1 }
 }
 
 #myDiv {
-  display: none;
-  text-align: center;
+	display: none;
+	text-align: center;
 }
-
