@@ -262,6 +262,41 @@ $(document).ready(function() {
 					test2 = dataSnapshot.child('name').val();
 					
 					test3 = dataSnapshot.child('info').val();
+					
+					var picture;
+					
+					if (test2 == "Apples") {
+						
+						picture = "<img src='images/apple.jpg' alt='apple' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Chicken") {
+						
+						picture = "<img src='images/chicken.jpg' alt='chicken' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Beef" ) {
+						
+						picture = "<img src='images/beef.png' alt='beef' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Cheese" ) {
+						
+						picture = "<img src='images/cheesejpg.jpg' alt='cheese' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Eggs" ) {
+						
+						picture = "<img src='images/eggs.jpg' alt='eggs' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Carrots" ) {
+						
+						picture = "<img src='images/carrots.jpg' alt='carrots' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Milk" ) {
+						
+						picture = "<img src='images/milk.jpg' alt='milk' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Bananas" ) {
+						
+						picture = "<img src='images/banana.jpg' alt='bananas' style='width:183px;height:183px;'>";
+					} else if ( test2 == "Butter" ) {
+						
+						picture = "<img src='images/butter.jpg' alt='butter' style='width:183px;height:183px;'>";
+					} else {
+						
+						picture = "";
+					}
+					
 		
 						var element = document.getElementById("ex1");
 						element.innerHTML = 
@@ -277,12 +312,13 @@ $(document).ready(function() {
 						"<b>Expiry: </b>" + test  +
 						"<br>" +
 						"<br>" 
-						+ "<b>Info: </b>" + test3 +
+						+ "<b>Info: </b>" + test3 + "<br>" + picture +
 						"</font>"
 						
 						;
 					$('#ex1').modal();
-					
+						
+				
 				});
 
 				
@@ -371,18 +407,21 @@ function(){
 	var ddd = today.getDate() + 14;
 	var dddd = today.getDate() + 1;
 		
-	if(dd<10) {
-		dd='0'+dd
+	if(ddd<10) {
+		ddd ='0'+ ddd;
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	} 
+
 		
 	if ( ddd > 30 ) {
 		
 		ddd = 30 - 14;
 		mm = mm + 1;
+		
+			if(mm<10) {
+		mm ='0'+ mm;
+	} 
+		
 	}
 		
 	today = mm + '/' + ddd + '/' + yyyy;
@@ -418,15 +457,21 @@ function(){
 		ddd = 30 - 6;
 		mm = mm + 1;
 		
+			if(mm<10) {
+		mm='0'+mm
+	} 
+		
 			if(ddd<10) {
 		ddd='0'+ddd
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	} 
+
 		
 	}
+	
+			if(mm<10) {
+		mm='0'+mm
+	} 
 		
 	today = mm + '/' + ddd + '/' + yyyy;
 	
@@ -478,6 +523,11 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+			if(mm<10) {
+		mm='0'+mm
+	} 
+		
 	} 
 
 	if(mm<10) {
@@ -522,11 +572,13 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+			if(mm<10) {
+		mm='0'+mm
+	} 
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	}
+
 		
 		
 	}
@@ -567,6 +619,11 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+			if(mm<10) {
+		mm='0'+mm
+	} 
+		
 	} 
 
 	if(mm<10) {
@@ -575,6 +632,7 @@ function(){
 		
 	}
 		
+	
 	today = mm + '/' + ddd + '/' + yyyy;
 	
 	var dateAgain = $('#datepicker');
@@ -608,12 +666,19 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+			if(mm<10) {
+		mm='0'+mm
+	} 
+		
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	}
+
 		
+	}
+	
+		if(mm<10) {
+		mm='0'+mm
 	}
 		
 	today = mm + '/' + dd + '/' + yyyy;
@@ -650,12 +715,16 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+		
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	}
+
 		
+	}
+	
+		if(mm<10) {
+		mm='0'+mm
 	}
 		
 	today = mm + '/' + ddd + '/' + yyyy;
@@ -691,13 +760,20 @@ function(){
 		
 					if(ddd<10) {
 		ddd='0'+ddd
+		
+			if(mm<10) {
+		mm='0'+mm
+	} 
+		
 	} 
 
-	if(mm<10) {
-		mm='0'+mm
-	}
+
 		
 	}
+	
+				if(mm<10) {
+		mm='0'+mm
+	} 
 		
 		
 	today = mm + '/' + ddd + '/' + yyyy;
