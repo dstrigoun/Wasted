@@ -9,11 +9,6 @@ header {
 	background-repeat: no-repeat;
     background-position: center;
 }
-/* facebook css */
-.fb-share-button {
-margin-left: 1%;
-margin-top: 1%;
-}
 .header_logo{
 	height: 295px
 }
@@ -47,17 +42,16 @@ margin-top: 1%;
     right: 0;
     top: 20px;
 }
-/*css for the index page */
-#signInError {
+/*css for the index page
+.error {
 	font-size: 2em;
     text-align: center;
-	
-}
-
-#signUpError {
-	font-size: 2em;
-    text-align: center;
-}
+    width: 80%;
+    margin: 0 auto;
+    padding: 21px;
+    height: 70px;
+    line-height: 70px;
+}*/
 
 .index_form {    
 	width: 80%;
@@ -122,6 +116,26 @@ margin-top: 1%;
 }
 .indexB:hover{
 	background-color: #306F33;
+}
+#centerbtn {
+
+}
+#googleBtn {
+    background-image: url('images/google.png');
+    background-repeat: no-repeat;
+    background-position: 10px ; 
+    background-size: 25px;
+    background-color: #FFFFFF;
+    border-radius: 36px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    text-decoration: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
 }
 #form {
     margin-bottom: 200px;
@@ -359,85 +373,25 @@ div.ui-datepicker {
 	font-size: 32px;
 }
 /*css for the fridge page*/
-#myBtn {
-	margin-bottom:30px;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2.6em;
-    cursor: pointer;
-    width: 516px;
-    margin-top: 12px;
-	float: right;
-	margin-right: 7%;
-}
-#topRemoveBtn {
-	margin-bottom:30px;
-    background-color: #333;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2.6em;
-    cursor: pointer;
-    width: 516px;
-    margin-top: 12px;
-	float: left;
-	margin-left: 7%;
-}
 @media screen and (max-width: 1100px) {
 	#myBtn {
 		float: right;
-		background-color: #4CAF50;	
+		background-color: #4CAF50;
 		border: none;
 		color: white;
-		padding: 20px 30px;
+		padding: 6px 30px;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
-		font-size: 6em;
+		font-size: 5.5em;
 		margin-right: 30px;
 		cursor: pointer;
 		border-radius: 76px;
 		position: fixed;
-		right: 9px;
-		bottom: 6px;
-		z-index: 1;
-		width: 150px;
+		right: 30px;
+		bottom: 55px;
+		z-index:1;
 	}
-	#topRemoveBtn {
-		background-color: #333;
-		border: none;
-		color: white;
-		padding: 8px 12px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 2.6em;
-		cursor: pointer;
-		width: 100%;
-		margin-top: 12px;
-		margin-left: 0;
-	}
-}
-#bottomRemoveBtn {
-	background-color: #333;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2.6em;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 12px;
 }
 #add_item {
     width: 80%;
@@ -480,8 +434,20 @@ div.ui-datepicker {
     border-radius: 12px;
     margin-top: 12px;
 }
+#removeAllButton {
+	background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.6em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
 
-
+}
 /*css for the table*/
 table.dataTable tbody tr { 
 	height: 150px;
@@ -492,7 +458,7 @@ table.dataTable tbody tr {
     font-size: 2.25em;
 }
 #fridge_length select {
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 #fridge_filter {
     font-size: 2.25em;
@@ -514,7 +480,6 @@ input[type="search"] {
 }
 #place_holder {
     padding: 15px 0;
-	margin-bottom: 190px;
 }
 #table_body {
     text-align: center;
@@ -562,72 +527,4 @@ tr:hover td { border-style: solid;}
     padding: 5px;
     margin: 20px;
     display: inline-block;
-}
-
-
-.test {
-    height: 183px;
-    margin-bottom: 71px;
-    width: 183px;
-}
-
-.pics {
-	height:183px;
-	width: 183px;
-}
-
-#picAdd {
-    width: 82%;
-    margin: 0 auto;
-}
-/* SPINNER */
-#loader {
-	position: absolute;
-	left: 50%;
-	top: 70%;
-	z-index: 1;
-	width: 150px;
-	height: 150px;
-	margin: -75px 0 0 -75px;
-	border: 16px solid #f3f3f3;
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	width: 120px;
-	height: 120px;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-	position: relative;
-	-webkit-animation-name: animatebottom;
-	-webkit-animation-duration: 1s;
-	animation-name: animatebottom;
-	animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-	from { bottom:-100px; opacity:0 } 
-	to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-	from{ bottom:-100px; opacity:0 } 
-	to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-	display: none;
-	text-align: center;
 }
