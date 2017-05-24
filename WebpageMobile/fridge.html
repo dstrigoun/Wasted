@@ -86,7 +86,7 @@
 		<a href="fridge.html">MyFridge</a>
 		<a href="about_us.html">About Us</a>
 		<a href="affiliate.html">Affiliates</a>
-		<a href="contact.html">Contact Us</a>
+		<a href="contact.html">Contact</a>
 		 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 	</div>
 	
@@ -118,9 +118,25 @@
 					<label class="fPage" for="info">Enter Additional Information: </label><br>
 					<input type="text" class="addInput" id="info" name="addinfo" placeholder="Information..."><br>
 					
-					<input type ="button" id="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
+					<input type ="button" class="add" href="#" onclick="myFunction()" value="Add by Picture"></input>
+					<input type ="button" class="add" alt="Add"  onclick ="submitClick()" value="Add To MyFridge"></input>
+					
+				
 					
 					</form>
+					
+					
+		
+					<script>
+						function myFunction() {
+							var popUp = document.getElementById('picAdd');
+							if (popUp.style.display === 'block') {
+								popUp.style.display = 'none';
+							} else {
+							popUp.style.display = 'block';
+							}
+						}
+					</script>
 					
 					<div id="picAdd">
 						<button class="test" id="chickenBtn"><img class="pics" src="images/chicken.jpg" alt="Chicken"><br>
@@ -231,7 +247,7 @@
 	}
 	</script>
 	
-	<script src = "index.js"> </script>
+	<!--<script src = "index.js"> </script>-->
 	
 
 	
