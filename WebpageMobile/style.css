@@ -9,6 +9,11 @@ header {
 	background-repeat: no-repeat;
     background-position: center;
 }
+/* facebook css */
+.fb-share-button {
+margin-left: 1%;
+margin-top: 1%;
+}
 .header_logo{
 	height: 295px
 }
