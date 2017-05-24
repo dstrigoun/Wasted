@@ -193,7 +193,6 @@ $headers = 'From: '.$email_from."\r\n".
   				table = document.getElementById("accordion");
   				tr = table.getElementsByClassName("wrap");
 
-
   				for (i = 0; i < tr.length; i++) {
     				td = tr[i].getElementsByTagName("h3")[0];
     				if (td) {

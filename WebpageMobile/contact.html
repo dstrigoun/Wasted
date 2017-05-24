@@ -151,17 +151,13 @@
 		</script>
 		<!--<script src="index.js"></script>-->
 		<script src="storage.js"></script>
-
 		<script>
 			function searchFood() {
-
   				var input, filter, table, tr, td, i;
   				input = document.getElementById("myInput");
   				filter = input.value.toUpperCase();
   				table = document.getElementById("accordion");
   				tr = table.getElementsByClassName("wrap");
-
-
   				for (i = 0; i < tr.length; i++) {
     				td = tr[i].getElementsByTagName("h3")[0];
     				if (td) {
@@ -173,7 +169,6 @@
     				} 
   				}
 			}
-
 		</script> 
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
