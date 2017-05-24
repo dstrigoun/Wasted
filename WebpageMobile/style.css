@@ -51,12 +51,14 @@ margin-top: 1%;
 #signInError {
 	font-size: 2em;
     text-align: center;
+	color: red;
 	
 }
 
 #signUpError {
 	font-size: 2em;
     text-align: center;
+	color: red;
 }
 
 .index_form {    
