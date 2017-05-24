@@ -186,11 +186,13 @@ $headers = 'From: '.$email_from."\r\n".
 
 		<script>
 			function searchFood() {
+
   				var input, filter, table, tr, td, i;
   				input = document.getElementById("myInput");
   				filter = input.value.toUpperCase();
   				table = document.getElementById("accordion");
   				tr = table.getElementsByClassName("wrap");
+
   				for (i = 0; i < tr.length; i++) {
     				td = tr[i].getElementsByTagName("h3")[0];
     				if (td) {
@@ -202,6 +204,7 @@ $headers = 'From: '.$email_from."\r\n".
     				} 
   				}
 			}
+
 		</script> 
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
