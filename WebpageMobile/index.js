@@ -183,13 +183,13 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		if ( expiry <= today ) {
 	
 	
-	var html = '<tr style="background-color: red;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>';
+	var html = '<tr style="background-color: #B81A16;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>';
 	$(html).appendTo('#table_body');
 	
 		} else if ( expiry == todayAgain || expiry == todayAgainAgain) {
 		
 	
-	var html = '<tr style="background-color: yellow;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
+	var html = '<tr style="background-color: #FFD119;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>'; 
 	
 	
 	$(html).appendTo('#table_body');
