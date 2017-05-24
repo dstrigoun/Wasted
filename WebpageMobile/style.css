@@ -47,16 +47,17 @@ margin-top: 1%;
     right: 0;
     top: 20px;
 }
-/*css for the index page
-.error {
+/*css for the index page */
+#signInError {
 	font-size: 2em;
     text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    padding: 21px;
-    height: 70px;
-    line-height: 70px;
-}*/
+	
+}
+
+#signUpError {
+	font-size: 2em;
+    text-align: center;
+}
 
 .index_form {    
 	width: 80%;
