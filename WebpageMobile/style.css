@@ -382,7 +382,7 @@ div.ui-datepicker {
     display: inline-block;
     font-size: 2.6em;
     cursor: pointer;
-    width: 516px;
+    width: 40%;
     margin-top: 12px;
 	float: right;
 	margin-right: 7%;
@@ -398,7 +398,7 @@ div.ui-datepicker {
     display: inline-block;
     font-size: 2.6em;
     cursor: pointer;
-    width: 516px;
+    width: 40%;
     margin-top: 12px;
 	float: left;
 	margin-left: 7%;
@@ -654,8 +654,53 @@ tr:hover td { border-style: solid;}
 	from{ bottom:-100px; opacity:0 } 
 	to{ bottom:0; opacity:1 }
 }
-
 #myDiv {
 	display: none;
 	text-align: center;
 }
+/*css for contact page*/
+#contactSumbit {
+	text-align:center;
+}
+#contact {
+    width: 700px;
+    margin: 0 auto;
+	font-size: 2.5em;
+}
+input[type="text"] {
+	width: 100%;
+    height: 42px;
+    font-size: 1em;
+    border: 2px solid #333;
+    border-radius: 44px;
+    margin: 10px 0;
+	padding: 2px 10px;
+}
+.contactTxt {
+    width: 233px;
+}
+#comment {
+    width: 700px;
+    margin: 10px 0;
+    border: 3px solid #333;
+    border-radius: 18px;
+    font-size: 1em;
+    padding: 10px;
+}
+#submitBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 26px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    float: right;
+    border-radius: 51px;
+}
+#contactTitle{
+    font-size: 3em;
+    padding-left: 10%;
+}
+
+
