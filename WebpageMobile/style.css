@@ -318,10 +318,10 @@ footer {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+  background-color: white;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 4px solid #333;
     width: 700px;
     height: 580px;
     border-radius: 30px;
@@ -579,20 +579,34 @@ tr:hover td { border-style: solid;}
 }
 
 
-.test {
-    height: 183px;
-    margin-bottom: 71px;
-    width: 183px;
-}
-
 .pics {
-	height:183px;
-	width: 183px;
+	height: 183px;
+    width: 183px;
+    border-radius: 400px;
 }
-
-#picAdd {
-    width: 82%;
+.picTitle {
+    width: 183px;
+    text-align: center;
+    margin: 14px 0;
+}
+.contain {
+    width: 186px;
+    float: left;
+}
+#contentPic {
+    width: 81%;
     margin: 0 auto;
+}
+#picAdd {
+    display: none;
+    width: 690px;
+    background-color: white;
+    margin-bottom: 40px;
+    height: 785px;
+    border: 4px solid #333;
+    margin-top: 62px;
+    padding: 18px 0;
+    border-radius: 24px;
 }
 /* SPINNER */
 #loader {
