@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     
 	//user is signed in
-   $("#signOutBtn").text(firebase.auth().currentUser.email + "| Logout");
+   $("#signOutBtn").text(firebase.auth().currentUser.email + " | Logout");
 
    
   } else {
@@ -183,7 +183,7 @@ firebaseRef.orderByChild("expiry").on("child_added", snap => {
 		if ( expiry <= today ) {
 	
 	
-	var html = '<tr style="background-color: #B81A16;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>';
+	var html = '<tr style="background-color: #FF0F46;" id ="'+id+'"><td>'+ name + '</td><td>' + expiry + '</td><td>' + daysLeft + '</td></tr>';
 	$(html).appendTo('#table_body');
 	
 		} else if ( expiry == todayAgain || expiry == todayAgainAgain) {
