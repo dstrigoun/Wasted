@@ -1,4 +1,85 @@
-<!DOCTYPE html>
+<?php
+if(isset($_POST['email'])) {
+ 
+    $email_to = "wasted.bcit@gmail.com";
+    $email_subject = "Your email subject line";
+ 
+    function died($error) {
+ 
+		echo "We have found errors in your code ";
+        echo "The following erros were found.<br /><br />";
+        echo $error."<br /><br />";
+        echo "Please go back and fix these and resubmit.<br /><br />";
+        die();
+    }
+ 
+ 
+    if(!isset($_POST['first_name']) ||
+        !isset($_POST['last_name']) ||
+        !isset($_POST['email']) ||
+        !isset($_POST['telephone']) ||
+        !isset($_POST['comments'])) {
+        died('We are sorry, but there appears to be a problem with the values you submitted.');       
+    }
+ 
+     
+ 
+    $first_name = $_POST['first_name']; 
+    $last_name = $_POST['last_name']; 
+    $email_from = $_POST['email']; 
+    $telephone = $_POST['telephone']; 
+    $comments = $_POST['comments']; 
+ 
+    $error_message = "";
+    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+ 
+  if(!preg_match($email_exp,$email_from)) {
+    $error_message .= 'The Email Address you entered is invalid.<br />';
+  }
+ 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+ 
+  if(!preg_match($string_exp,$first_name)) {
+    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+  }
+ 
+  if(!preg_match($string_exp,$last_name)) {
+    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+  }
+ 
+  if(strlen($comments) < 2) {
+    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+  }
+ 
+  if(strlen($error_message) > 0) {
+    died($error_message);
+  }
+ 
+    $email_message = "Form details below.\n\n";
+ 
+     
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
+    }
+ 
+     
+ 
+    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+    $email_message .= "Comments: ".clean_string($comments)."\n";
+ 
+
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);  
+?>
+ 
+<!-- include your own success html here -->
+ <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -55,12 +136,15 @@
 			</div>
 		</header>
 		<div class="topnav" id="myTopnav">
-			<a href="tips.html">Tips</a>
+			<a href="contact.html">Contact Us</a>
 			<a href="fridge.html">MyFridge</a>
 			<a href="about_us.html">About Us</a>
 			<a href="affiliate.html">Affiliates</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
+		
+		
+		
 		<script>
 			function myFunction() {
 				var x = document.getElementById("myTopnav");
@@ -71,62 +155,17 @@
 				}
 			}
 		</script>
-
-		<div id="food">
-			<input type="text" id="myInput" onkeyup="searchFood()" placeholder="&#9906 Search for foods..">
+		
+		
+		<div id ="contactpage">
+		<h1>Thank-you for contacting us!</h2>
+		
 		</div>
 		
-		<div id="accordion">
-			<div class="wrap">
-  				<h3>Apple</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
-  				</div>
-  			</div>
-  			<div class="wrap">
-  				<h3>Banana</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
-  				</div>
-  			</div>
-  			<div class="wrap">
-  				<h3>Carrot</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
-  				</div>
-  			</div>
-  			<div class="wrap">
-  				<h3>Yoghurt</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
-  				</div>
-  			</div>
-  			<div class="wrap">
-  				<h3>Milk</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
-  				</div>
-  			</div>
-  			<div class="wrap">
-  				<h3>Eggs</h3>
-  			</div>
-  			<div class="inside">
-  				<div>
-    				<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
-  				</div>
-  			</div>
-		</div>
-
+		
+		
+		
+		
 		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 		<script>
 			// Initialize Firebase
@@ -152,7 +191,6 @@
   				table = document.getElementById("accordion");
   				tr = table.getElementsByClassName("wrap");
 
-
   				for (i = 0; i < tr.length; i++) {
     				td = tr[i].getElementsByTagName("h3")[0];
     				if (td) {
@@ -177,3 +215,8 @@
   		</script>
 	</body>
 </html>
+ 
+<?php
+ 
+}
+?>
